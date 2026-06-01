@@ -1,35 +1,439 @@
-	•	Biographie
-	•	EP
-	•	Univers
-	•	Contact
-КРОВИНА ВОРОНА
-KROVINA VORONA
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krovina Vorona | Official Website</title>
+
+<meta name="description" content="Official website of Krovina Vorona">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#050505;
+--card:#111111;
+--text:#f5f5f5;
+--accent:#c0c0c0;
+--red:#8b0000;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:Inter,sans-serif;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+z-index:999;
+padding:15px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("3D8F2F7C-94CA-429B-80A7-34725A9B85A8.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+animation:fadeIn 2s ease;
+}
+
+.logo{
+width:180px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-family:Cinzel,serif;
+font-size:4.5rem;
+letter-spacing:4px;
+}
+
+.hero h2{
+font-family:Cinzel,serif;
+color:var(--accent);
+margin-top:10px;
+}
+
+.hero p{
+margin-top:20px;
+font-size:1.2rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+color:black;
+}
+
+section{
+max-width:1200px;
+margin:auto;
+padding:100px 20px;
+}
+
+.section-title{
+font-family:Cinzel,serif;
+font-size:2.8rem;
+text-align:center;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.tracklist li{
+margin:12px 0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.quote{
+text-align:center;
+font-size:1.5rem;
+font-style:italic;
+max-width:900px;
+margin:auto;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:14px 25px;
+border:1px solid white;
+text-decoration:none;
+color:white;
+}
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #222;
+margin-top:50px;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:none;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#bio">Biographie</a></li>
+<li><a href="#ep">EP</a></li>
+<li><a href="#gallery">Galerie</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img
+class="logo"
+src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
+
+<h1>КРОВИНА ВОРОНА</h1>
+
+<h2>KROVINA VORONA</h2>
+
+<p>
+Artiste indépendante • Ghostwriter • Auteur-compositeur
+</p>
+
+<p>
 Entre le passé et le nouveau monde.
+</p>
+
+<a href="#ep" class="btn">
 Découvrir l'EP
+</a>
+
+</div>
+
+</header>
+
+<section id="bio" class="fade">
+
+<h2 class="section-title">
 BIOGRAPHIE
-Née à Moscou le 23 août 2001, Krovina Vorona est une artiste indépendante russo-géorgienne. Son univers mêle spiritualité, culture slave, ésotérisme, humanisme et musique alternative contemporaine.
+</h2>
 
-Après son passage chez Matriochka Record, elle poursuit sa carrière de manière indépendante et prépare son propre label.
+<div class="grid">
+
+<div>
+<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png">
+</div>
+
+<div class="card">
+
+<p>
+
+Née à Moscou le 23 août 2001, Krovina Vorona est une artiste indépendante russo-géorgienne.
+
+</p>
+
+<br>
+
+<p>
+
+Fille unique d'un père russo-géorgien et d'une mère franco-italienne, elle grandit principalement en Géorgie avant de poursuivre ses études à Saint-Pétersbourg.
+
+</p>
+
+<br>
+
+<p>
+
+Ancienne membre de Matriochka Record, elle poursuit aujourd'hui une carrière totalement indépendante et prépare son propre label.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="ep" class="fade">
+
+<h2 class="section-title">
+
 НОВЫЙ ПОРЯДОК
-Premier EP officiel
-	•	01 — Чёрный Дождь Мегаполиса
-	•	02 — Рептилий Шёпот
-	•	03 — Ночной Конверт
-	•	04 — Чёрные Свечи
-Une exploration de l'identité, de la spiritualité et du monde moderne à travers une esthétique sombre inspirée de la culture slave contemporaine.
-UNIVERS
-Spiritualité
-Ésotérisme
-Culture Slave
-Humanisme
-Transformation
-Liberté Artistique
-« La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »
-CONTACT
-📧 krovina.vorona495@outlook.fr
 
-BandLab : @krovina_vorona
-SoundCloud : Krovina Vorona
-Instagram : @krovina_vorona
-TikTok : @krovina_vorona
-КРОВИНА ВОРОНА © 2026
+</h2>
+
+<div class="grid">
+
+<div>
+
+<img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
+
+</div>
+
+<div class="card">
+
+<h3>Premier EP Officiel</h3>
+
+<br>
+
+<ul class="tracklist">
+
+<li>01 — Чёрный Дождь Мегаполиса</li>
+
+<li>02 — Рептилий Шёпот</li>
+
+<li>03 — Ночной Конверт</li>
+
+<li>04 — Чёрные Свечи</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="fade">
+
+<h2 class="section-title">
+GALERIE
+</h2>
+
+<div class="gallery">
+
+<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png">
+
+<img src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
+
+<img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<div class="quote">
+
+« La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »
+
+<br><br>
+
+— Krovina Vorona
+
+</div>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2 class="section-title">
+CONTACT
+</h2>
+
+<div class="contact">
+
+<p>
+📧 krovina.vorona495@outlook.fr
+</p>
+
+<br>
+
+<a href="https://www.bandlab.com/krovina_vorona" target="_blank">
+BandLab
+</a>
+
+<a href="https://on.soundcloud.com/JKTGzo4Lij93OCX0O7" target="_blank">
+SoundCloud
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+КРОВИНА ВОРОНА
+
+<br><br>
+
+© 2026 Krovina Vorona
+
+</footer>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
