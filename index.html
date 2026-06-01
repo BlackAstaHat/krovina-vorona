@@ -3,852 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Krovina Vorona | Official Website</title>
-    <meta name="description" content="Official website of Krovina Vorona, independent Russian-Georgian artist. Discover the EP « Новый Порядок », biography, visuals and official links.">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <title>Krovina Vorona - Teaser EP</title>
     <style>
-        :root {
-            --bg: #030303;
-            --card: #0b0b0b;
-            --card-hover: #121212;
-            --text: #f5f5f5;
-            --text-muted: #8a8a8a;
-            --accent: #c0c0c0;
-            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            line-height: 1.6;
-        }
-
-        /* --- BARRE DE NAVIGATION (GLASSMORPHISM) --- */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(3, 3, 3, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            z-index: 999;
-            padding: 25px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-            transition: var(--transition);
-        }
-
-        nav.scrolled {
-            padding: 15px 0;
-            background: rgba(3, 3, 3, 0.9);
-            border-bottom-color: rgba(255, 255, 255, 0.05);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            list-style: none;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-
-        nav a:hover, nav a.active {
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
-
-        /* --- HERO SECTION & PARALLAXE --- */
-        .hero {
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 20px;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 120%; /* Déborde pour permettre le mouvement parallaxe */
-            background: linear-gradient(to bottom, rgba(3,3,3,0.3), var(--bg)), url("3D8F2F7C-94CA-429B-80A7-34725A9B85A8.png");
-            background-size: cover;
-            background-position: center;
-            will-change: transform;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: heroFadeIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
-        }
-
-        .logo {
-            width: 140px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 15px rgba(255,255,255,0.08));
-            transition: var(--transition);
-        }
-
-        .logo:hover {
-            transform: scale(1.03);
-        }
-
-        .hero h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 4.8rem;
-            letter-spacing: 8px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            background: linear-gradient(to right, #ffffff, #999999);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--accent);
-            font-size: 1.6rem;
-            letter-spacing: 6px;
-            margin-bottom: 35px;
-            font-weight: 400;
-        }
-
-        .hero .subtitle {
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .hero .slogan {
-            font-style: italic;
-            font-size: 1.15rem;
-            color: #fff;
-            margin-bottom: 45px;
-            opacity: 0.85;
-        }
-
-        .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 35px;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: var(--transition);
-        }
-
-        .btn.primary {
-            background: #fff;
-            color: #000;
-            border-color: #fff;
-            font-weight: 600;
-        }
-
-        .btn.primary:hover {
-            background: transparent;
-            color: #fff;
-            box-shadow: 0 0 25px rgba(255,255,255,0.1);
-        }
-
-        .btn.secondary:hover {
-            background: rgba(255,255,255,0.05);
-            border-color: #fff;
-        }
-
-        /* --- SECTIONS (MISE EN PAGE PRO) --- */
-        section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 140px 20px;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
-            text-align: center;
-            margin-bottom: 80px;
-            letter-spacing: 5px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 30px;
-            height: 1px;
-            background: var(--accent);
-            margin: 20px auto 0 auto;
-            opacity: 0.3;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            flex-direction: column;
             align-items: center;
         }
 
-        .img-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.03);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-        }
-
-        .bio-img, .ep-img {
+        .container {
+            max-width: 600px;
             width: 100%;
-            display: block;
-            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
         }
 
-        .img-container:hover .bio-img,
-        .img-container:hover .ep-img {
-            transform: scale(1.03);
-        }
-
-        .card {
-            background: var(--card);
-            padding: 50px;
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.01);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            border-color: rgba(255,255,255,0.04);
-            background: var(--card-hover);
-        }
-
-        /* --- BIOGRAPHIE --- */
-        #bio .card p {
-            color: #cdcdcd;
-            font-size: 1.05rem;
-            font-weight: 300;
-            margin-bottom: 25px;
-        }
-        #bio .card p:last-child { margin-bottom: 0; }
-        #bio .card strong { color: #fff; font-weight: 500; }
-
-        /* --- SECTION EP & LECTEUR AUDIO INTERACTIF --- */
-        .card h3 {
-            font-family: 'Cinzel', serif;
+        h1 {
+            text-align: center;
+            color: #e50914;
+            margin-bottom: 10px;
             font-size: 2rem;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .card .ep-subtitle {
-            color: var(--accent);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-        }
-
-        .card .ep-description {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .card .ep-date {
-            font-size: 0.85rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            color: #fff;
         }
 
-        .tracklist {
-            list-style: none;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 25px;
-        }
-
-        .tracklist li {
-            padding: 14px 15px;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .tracklist li:hover {
-            background: rgba(255,255,255,0.02);
-            padding-left: 22px;
-            color: #fff;
-        }
-
-        .tracklist li.active-track {
-            background: rgba(255,255,255,0.05);
-            color: #fff;
-            font-weight: 500;
-            border-left: 2px solid #fff;
-        }
-
-        .tracklist li::after {
-            content: '▶';
-            font-size: 0.65rem;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .tracklist li:hover::after, .tracklist li.active-track::after {
-            opacity: 0.5;
-        }
-
-        /* Lecteur audio immersif (Stylisé) */
-        .audio-player-mock {
-            margin-top: 35px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 18px 20px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            border: 1px solid rgba(255,255,255,0.01);
-        }
-
-        .play-btn-mock {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: #fff;
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        .play-btn-mock:hover { transform: scale(1.05); }
-
-        .player-info-mock { flex-grow: 1; }
-        .player-track-title { font-size: 0.85rem; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.5px; }
-        .player-bar-total { width: 100%; height: 2px; background: rgba(255,255,255,0.08); position: relative; }
-        .player-bar-current { width: 25%; height: 100%; background: var(--accent); position: absolute; left: 0; top: 0; transition: width 0.4s ease; }
-        
-        /* Spectre Audio Animé */
-        .wave-anim {
-            display: flex;
-            align-items: flex-end;
-            gap: 3px;
-            height: 18px;
-            width: 20px;
-        }
-        .wave-bar {
-            width: 2px;
-            height: 2px;
-            background: var(--text-muted);
-        }
-        .playing .wave-bar {
-            animation: soundWave 1s ease-in-out infinite alternate;
-        }
-        .playing .wave-bar:nth-child(1) { animation-delay: 0.1s; }
-        .playing .wave-bar:nth-child(2) { animation-delay: 0.4s; }
-        .playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
-        .playing .wave-bar:nth-child(4) { animation-delay: 0.6s; }
-
-        @keyframes soundWave {
-            0% { height: 2px; }
-            100% { height: 18px; }
-        }
-
-        /* --- SECTION UNIVERS (GRILLE THÉMATIQUE) --- */
-        .univers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .univers-tag {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.01);
-            padding: 35px 20px;
+        .subtitle {
             text-align: center;
-            border-radius: 4px;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .track-section {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .track-section:last-of-type {
+            border-bottom: none;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: #cccccc;
             font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            transition: var(--transition);
+            line-height: 1.5;
         }
 
-        .univers-tag:hover {
-            border-color: rgba(255,255,255,0.08);
-            background: var(--card-hover);
-            color: #fff;
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        /* --- SECTION GALERIE (MODE CINÉMA CLICABLE) --- */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 6px;
-            cursor: pointer;
-            border: 1px solid rgba(255,255,255,0.01);
-            height: 420px;
-        }
-
-        .gallery img {
+        audio {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 10px;
         }
 
-        .gallery-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(3, 3, 3, 0.6);
-            opacity: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            letter-spacing: 3px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-item:hover img { transform: scale(1.04); }
-
-        /* --- SECTION CITATION --- */
-        .quote-section {
-            padding: 140px 20px;
-            background: linear-gradient(to bottom, transparent, #070707, transparent);
-        }
-
-        .quote {
-            text-align: center;
-            font-size: 1.65rem;
-            font-style: italic;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        .quote span {
-            display: block;
-            margin-top: 30px;
-            font-style: normal;
-            font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
-            letter-spacing: 3px;
-            color: var(--accent);
-            text-transform: uppercase;
-        }
-
-        /* --- SECTION CONTACT & LIENS --- */
-        .contact { text-align: center; }
-        .contact p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 300; letter-spacing: 0.5px; }
-        
         .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            display: inline-block;
-            padding: 16px 40px;
-            border: 1px solid rgba(255,255,255,0.08);
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: #fff;
-            color: #000;
-            border-color: #fff;
-            box-shadow: 0 15px 35px rgba(255,255,255,0.08);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            padding: 80px 20px;
+            margin-top: 40px;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.02);
-            color: var(--text-muted);
-            font-size: 0.8rem;
+            padding-top: 20px;
+            border-top: 2px solid #e50914;
+        }
+
+        .social-links h4 {
+            margin-bottom: 15px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        footer .footer-title {
-            font-family: 'Cinzel', serif;
-            color: #fff;
-            font-size: 1.5rem;
-            letter-spacing: 4px;
-            margin-bottom: 12px;
+        .btn-social {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
 
-        footer .footer-slogan {
-            font-style: italic;
-            margin-bottom: 25px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #ffffff;
         }
 
-        /* --- LIGHTBOX (MODE CINÉMA EFFECT) --- */
-        .lightbox {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(3,3,3,0.96);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-        }
-        .lightbox.active { opacity: 1; pointer-events: auto; }
-        .lightbox img { max-width: 90%; max-height: 82vh; object-fit: contain; border-radius: 4px; transform: scale(0.96); transition: transform 0.4s ease;}
-        .lightbox.active img { transform: scale(1); }
-        .lightbox-close { position: absolute; top: 30px; right: 40px; font-size: 2.2rem; color: #fff; cursor: pointer; opacity: 0.5; transition: 0.3s;}
-        .lightbox-close:hover { opacity: 1; }
-
-        /* --- CONFIGURATION DU ENGINE D'ANIMATION --- */
-        .animated { opacity: 0; }
-        .fade-in-up { transform: translateY(40px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-        .fade-in-left { transform: translateX(-40px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-        .fade-in-right { transform: translateX(40px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-        
-        .animated.show { opacity: 1; transform: none; }
-
-        @keyframes heroFadeIn {
-            to { opacity: 1; transform: none; }
+        .btn-tiktok {
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #ffffff;
         }
 
-        /* --- RESPONSIVE ADAPTATION --- */
-        @media(max-width:960px){
-            nav ul { gap: 20px; }
-            .hero h1 { font-size: 3rem; letter-spacing: 4px; }
-            .hero h2 { font-size: 1.3rem; letter-spacing: 3px; }
-            .section-title { font-size: 1.9rem; }
-            .grid { grid-template-columns: 1fr; gap: 50px; }
-            .card { padding: 40px 25px; }
-            .hero-buttons { flex-direction: column; align-items: stretch; max-width: 300px; margin: auto; width: 100%; }
-            .quote { font-size: 1.35rem; }
-            .gallery-item { height: 340px; }
+        .btn-social:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
     </style>
 </head>
-
 <body>
 
-    <!-- LIGHTBOX SYSTEM -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <img src="" alt="Visuel Plein Écran" id="lightboxImg">
+<div class="container">
+    <h1>Krovina Vorona</h1>
+    <div class="subtitle">Découvrez les extraits exclusifs avant la sortie</div>
+
+    <!-- Option 1 -->
+    <div class="track-section">
+        <h3>Option 1 : Ambiance Rap/Geopolitique Consciente</h3>
+        <p>Un extrait rythmé et percutant qui plonge directement dans l'univers de la surveillance numérique et des mystères de l'Antarctique.</p>
+        <audio controls>
+            <source src="https://storage.googleapis.com/baking-audio-experiments/NouvelOrdre_Rap_Snippet.mp3" type="audio/mp3">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
     </div>
 
-    <!-- MENU DE NAVIGATION -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#bio" class="nav-link">À Propos</a></li>
-            <li><a href="#ep" class="nav-link">EP</a></li>
-            <li><a href="#univers" class="nav-link">Univers</a></li>
-            <li><a href="#gallery" class="nav-link">Galerie</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Option 2 -->
+    <div class="track-section">
+        <h3>Option 2 : Ambiance Mystique & Envoûtante</h3>
+        <p>Un extrait plus sombre et planant, axé sur les fréquences du cœur et les mystères de la Terre.</p>
+        <audio controls>
+            <source src="https://storage.googleapis.com/baking-audio-experiments/ToroidalField_Vibe_Snippet.mp3" type="audio/mp3">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+    </div>
 
-    <!-- HERO HEADER -->
-    <header class="hero">
-        <div class="hero-bg" id="heroBg"></div>
-        <div class="hero-content">
-            <img class="logo" src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png" alt="Krovina Vorona Logo">
-            <h1>КРОВИНА ВОРОНА</h1>
-            <h2>KROVINA VORONA</h2>
-            <p class="subtitle">Artiste indépendante • Ghostwriter • Auteur-compositeur</p>
-            <p class="slogan">« Entre le passé et le nouveau monde. »</p>
-            <div class="hero-buttons">
-                <a href="#ep" class="btn primary">▶ Écouter « Новый Порядок »</a>
-                <a href="#bio" class="btn secondary">Voir la biographie</a>
-            </div>
-        </div>
-    </header>
+    <!-- Option 3 -->
+    <div class="track-section">
+        <h3>Option 3 : Version Synth/Futuriste</h3>
+        <p>Un extrait instrumental et vocal combinant des sonorités modernes et spatiales.</p>
+        <audio controls>
+            <source src="https://storage.googleapis.com/baking-audio-experiments/Futuristic_Vibe_Snippet.mp3" type="audio/mp3">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+    </div>
 
-    <!-- SECTION BIOGRAPHIE (ANIMATIONS ASYMÉTRIQUES) -->
-    <section id="bio">
-        <h2 class="section-title animated fade-in-up">À PROPOS</h2>
-        <div class="grid">
-            <div class="img-container animated fade-in-left">
-                <img class="bio-img" src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png" alt="Krovina Vorona Portrait">
-            </div>
-            <div class="card animated fade-in-right">
-                <p>Née à Moscou le 23 août 2001, <strong>Krovina Vorona</strong> est une artiste indépendante russo-géorgienne dont l’univers mêle spiritualité, culture slave, introspection et musique alternative contemporaine.</p>
-                <p>Fille unique d’un père russo-géorgien et d’une mère franco-italienne, elle grandit principalement en Géorgie avant de poursuivre ses études à Saint-Pétersbourg.</p>
-                <p>Autodidacte, elle débute comme <em>ghostwriter</em> avant de développer son propre projet artistique.</p>
-                <p>Après son passage chez <em>Matriochka Record</em>, elle choisit l’indépendance afin de construire une vision créative sans compromis.</p>
-                <p>Aujourd’hui, Krovina Vorona poursuit un objectif simple : <strong>Faire découvrir sa culture, son histoire et sa musique au-delà des frontières.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION EP (AVEC TRACKLIST INTERACTIVE + LECTEUR AUDIO) -->
-    <section id="ep">
-        <h2 class="section-title animated fade-in-up">НОВЫЙ ПОРЯДОК</h2>
-        <div class="grid">
-            <div class="img-container animated fade-in-left">
-                <img class="ep-img" src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png" alt="Cover EP Новый Порядок">
-            </div>
-            <div class="card animated fade-in-right">
-                <h3>НОВЫЙ ПОРЯДОК</h3>
-                <p class="ep-subtitle">Premier EP Officiel</p>
-                <p class="ep-description">« Новый Порядок » est une exploration de la solitude moderne, de l’identité culturelle, du pouvoir, de la spiritualité et des transformations du monde contemporain.</p>
-                <p class="ep-date">📅 Sortie : 29 Mai 2026</p>
-                
-                <!-- Liste des morceaux -->
-                <ul class="tracklist" id="tracklist">
-                    <li class="active-track" data-track="01 — Чёрный Дождь Мегаполиса">01 — Чёрный Дождь Мегаполиса</li>
-                    <li data-track="02 — Рептилий Шёпот">02 — Рептилий Шёпот</li>
-                    <li data-track="03 — Ночной Конверт">03 — Ночной Конверт</li>
-                    <li data-track="04 — Чёрные Свечи">04 — Чёрные Свечи</li>
-                </ul>
-
-                <!-- Lecteur Immersif Interactif -->
-                <div class="audio-player-mock playing" id="playerContainer">
-                    <div class="play-btn-mock" id="playerPlayBtn">❚❚</div>
-                    <div class="player-info-mock">
-                        <div class="player-track-title" id="playerTitle">01 — Чёрный Дождь Мегаполиса</div>
-                        <div class="player-bar-total"><div class="player-bar-current" id="playerProgress"></div></div>
-                    </div>
-                    <div class="wave-anim">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION UNIVERS (BLOCS THÉMATIQUES CONSERVÉS) -->
-    <section id="univers">
-        <h2 class="section-title animated fade-in-up">UNIVERS</h2>
-        <div class="univers-grid animated fade-in-up">
-            <div class="univers-tag">Spiritualité</div>
-            <div class="univers-tag">Ésotérisme</div>
-            <div class="univers-tag">Culture Slave</div>
-            <div class="univers-tag">Humanisme</div>
-            <div class="univers-tag">Mémoire</div>
-            <div class="univers-tag">Transformation</div>
-            <div class="univers-tag">Liberté Artistique</div>
-            <div class="univers-tag">Tradition & Modernité</div>
-        </div>
-    </section>
-
-    <!-- SECTION GALERIE (OUVERTURE EN DESIGN MODAL PLIN ÉCRAN) -->
-    <section id="gallery">
-        <h2 class="section-title animated fade-in-up">GALERIE</h2>
-        <div class="gallery animated fade-in-up">
-            <div class="gallery-item" onclick="openLightbox('D67B683F-A4CD-4049-9C38-C2A90C65FD16.png')">
-                <img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png" alt="Visuel Galerie 1">
-                <div class="gallery-overlay">Agrandir</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox('9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png')">
-                <img src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png" alt="Visuel Galerie 2">
-                <div class="gallery-overlay">Agrandir</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox('2E1239D0-E810-4D10-B512-CA4EA508A5B4.png')">
-                <img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png" alt="Visuel Galerie 3">
-                <div class="gallery-overlay">Agrandir</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION CITATION -->
-    <section class="quote-section">
-        <div class="quote animated fade-in-up">
-            « La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »
-            <span>— Krovina Vorona</span>
-        </div>
-    </section>
-
-    <!-- SECTION CONTACT (LIENS BANDLAB ET SOUNDCLOUD CONSERVÉS) -->
-    <section id="contact">
-        <h2 class="section-title animated fade-in-up">CONTACT</h2>
-        <div class="contact animated fade-in-up">
-            <p>📧 krovina.vorona495@outlook.fr</p>
-            <div class="social-links">
-                <a href="https://www.bandlab.com/krovina_vorona" target="_blank">BandLab</a>
-                <a href="https://on.soundcloud.com/JKTGzo4Lij93OCX0O7" target="_blank">SoundCloud</a>
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-                <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-title">КРОВИНА ВОРОНА</div>
-        <div class="footer-slogan">« Entre le passé et le nouveau monde. »</div>
-        <div>© 2026 Krovina Vorona. Tous droits réservés.</div>
-    </footer>
-
-
-    <!-- LOGIQUE JAVASCRIPT NATIVE -->
-    <script>
-        // 1. Déclencheur d'animations précises au scroll (Intersection Observer)
-        const animOptions = { threshold: 0.12, rootMargin: "0px 0px -40px 0px" };
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, animOptions);
-
-        document.querySelectorAll('.animated').forEach(el => {
-            scrollObserver.observe(el);
-        });
-
-        // 2. Comportement dynamique de la Navbar & Mise en valeur des liens
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            let fromTop = window.scrollY + 120;
-            document.querySelectorAll('.nav-link').forEach(link => {
-                let section = document.querySelector(link.hash);
-                if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        });
-
-        // 3. Effet parallaxe 3D sur le Background Hero
-        const heroBg = document.getElementById('heroBg');
-        window.addEventListener('scroll', () => {
-            let offset = window.pageYOffset;
-            heroBg.style.transform = `translateY(${offset * 0.35}px)`;
-        });
-
-        // 4. Gestion de la Tracklist & Simulation Intelligente du Lecteur Audio
-        const trackElements = document.querySelectorAll('#tracklist li');
-        const playerTitle = document.getElementById('playerTitle');
-        const playerContainer = document.getElementById('playerContainer');
-        const playerPlayBtn = document.getElementById('playerPlayBtn');
-        const playerProgress = document.getElementById('playerProgress');
-
-        trackElements.forEach(track => {
-            track.addEventListener('click', function() {
-                trackElements.forEach(t => t.classList.remove('active-track'));
-                this.classList.add('active-track');
-                
-                // Change le titre affiché sur le lecteur
-                const targetTrackName = this.getAttribute('data-track');
-                playerTitle.innerText = targetTrackName;
-                
-                // Force l'état actif et réinitialise la progression fictive
-                playerContainer.classList.add('playing');
-                playerPlayBtn.innerText = '❚❚';
-                playerProgress.style.width = '0%';
-                setTimeout(() => { playerProgress.style.width = Math.floor(Math.random() * 50 + 25) + '%'; }, 150);
-            });
-        });
-
-        // Toggle Play / Pause simulé
-        playerPlayBtn.addEventListener('click', () => {
-            if(playerContainer.classList.contains('playing')) {
-                playerContainer.classList.remove('playing');
-                playerPlayBtn.innerText = '▶';
-            } else {
-                playerContainer.classList.add('playing');
-                playerPlayBtn.innerText = '❚❚';
-            }
-        });
-
-        // 5. Gestion de la Galerie "Mode Cinéma" (Lightbox)
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        
-        function openLightbox(imageSrc) {
-            lightboxImg.src = imageSrc;
-            lightbox.classList.add('active');
-        }
-
-        document.getElementById('lightboxClose').addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-        lightbox.addEventListener('click', (e) => {
-            if(e.target !== lightboxImg) lightbox.classList.remove('active');
-        });
-    </script>
+    <!-- Section Réseaux Sociaux -->
+    <div class="social-links">
+        <h4>Rejoindre l'univers</h4>
+        <a href="https://www.instagram.com/krovina.vorona?igsh=dGRrbW1ycTA1bmto&utm_source=qr" target="_blank" class="btn-social btn-instagram">Instagram</a>
+        <a href="https://www.tiktok.com/@krovina495?_r=1&_t=ZN-96puAhHXNEk" target="_blank" class="btn-social btn-tiktok">TikTok</a>
+    </div>
+</div>
 
 </body>
 </html>
