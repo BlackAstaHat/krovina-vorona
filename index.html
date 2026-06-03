@@ -17,7 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
 --bg:#050505;
 --card:#111;
@@ -48,6 +47,10 @@ padding:15px;
 background:rgba(0,0,0,.85);
 backdrop-filter:blur(12px);
 z-index:999;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
 }
 
 nav ul{
@@ -56,12 +59,34 @@ justify-content:center;
 gap:25px;
 list-style:none;
 flex-wrap:wrap;
+margin:auto;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 font-weight:600;
+transition: .3s;
+}
+
+nav a:hover{
+color: var(--accent);
+}
+
+.lang-selector{
+background: transparent;
+color: white;
+border: 1px solid white;
+padding: 5px 10px;
+cursor: pointer;
+font-family: Inter, sans-serif;
+font-weight: 600;
+outline: none;
+}
+
+.lang-selector option {
+background: black;
+color: white;
 }
 
 .hero{
@@ -131,7 +156,7 @@ margin-bottom:50px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
-align-items:center;
+align-items:start;
 }
 
 .card{
@@ -144,6 +169,31 @@ border-radius:15px;
 .card img{
 width:100%;
 border-radius:12px;
+}
+
+.bio-text p {
+margin-bottom: 15px;
+line-height: 1.6;
+font-size: 1rem;
+color: #e0e0e0;
+}
+
+.bio-text h3 {
+font-family: Cinzel, serif;
+margin: 20px 0 10px 0;
+color: white;
+border-bottom: 1px solid #333;
+padding-bottom: 5px;
+}
+
+.bio-text ul {
+margin-left: 20px;
+margin-bottom: 15px;
+}
+
+.bio-text li {
+margin-bottom: 5px;
+color: #ccc;
 }
 
 .track{
@@ -184,6 +234,7 @@ font-size:1.4rem;
 font-style:italic;
 max-width:900px;
 margin:auto;
+line-height: 1.6;
 }
 
 footer{
@@ -204,219 +255,225 @@ transform:none;
 }
 
 @media(max-width:900px){
-
+nav {
+flex-direction: column;
+gap: 10px;
+padding: 10px;
+}
 .hero h1{
 font-size:2.4rem;
 }
-
 .grid{
 grid-template-columns:1fr;
 }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-<ul>
-<li><a href="#bio">Bio</a></li>
-<li><a href="#ep">EP</a></li>
-<li><a href="#listen">Écouter</a></li>
-<li><a href="#gallery">Galerie</a></li>
-<li><a href="#socials">Réseaux</a></li>
-<li><a href="#contact">Contact</a></li>
+<ul id="nav-links">
+<li><a href="#bio" data-key="nav-bio">Bio</a></li>
+<li><a href="#ep" data-key="nav-ep">EP</a></li>
+<li><a href="#listen" data-key="nav-listen">Écouter</a></li>
+<li><a href="#gallery" data-key="nav-gallery">Galerie</a></li>
+<li><a href="#socials" data-key="nav-socials">Réseaux</a></li>
+<li><a href="#contact" data-key="nav-contact">Contact</a></li>
 </ul>
+<select class="lang-selector" onchange="changeLanguage(this.value)">
+<option value="fr">FR</option>
+<option value="en">EN</option>
+<option value="ru">RU</option>
+<option value="ka">KA</option>
+</select>
 </nav>
 
 <header class="hero">
-
 <div>
-
 <img class="logo" src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
-
 <h1>КРОВИНА ВОРОНА</h1>
-
 <h2>KROVINA VORONA</h2>
-
-<p>Independent Artist • Ghostwriter • Songwriter</p>
-
-<p>Entre le passé et le nouveau monde.</p>
-
-<a href="#ep" class="btn">Découvrir l'EP</a>
-
+<p data-key="hero-sub">Independent Artist • Ghostwriter • Songwriter</p>
+<p style="font-style: italic; margin-top: 10px;" data-key="hero-quote">« Entre le passé et le nouveau monde. »</p>
+<a href="#ep" class="btn" data-key="hero-btn">Découvrir l'EP</a>
 </div>
-
 </header>
 
 <section id="bio" class="fade">
-
-<h2 class="section-title">BIOGRAPHIE</h2>
-
+<h2 class="section-title" data-key="title-bio">BIOGRAPHIE</h2>
 <div class="grid">
-
 <div>
-<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png">
+<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png" style="width:100%; border-radius:12px;">
 </div>
-
-<div class="card">
-
-<p>Née à Moscou le 23 août 2001.</p>
-
-<br>
-
-<p>Artiste indépendante russo-géorgienne, auteure-compositrice et ghostwriter.</p>
-
-<br>
-
-<p>Ancienne membre de Matriochka Record.</p>
-
-<br>
-
-<p>Univers : spiritualité, ésotérisme, culture slave et engagement humain.</p>
-
-<hr style="margin:20px 0">
-
-<p>Родилась в Москве 23 августа 2001 года.</p>
-
-<p>Независимая артистка и автор песен.</p>
-
-<p>Выросла между Россией и Грузией.</p>
-
+<div class="card bio-text" id="bio-content">
+<!-- Rempli dynamiquement par JS -->
 </div>
-
 </div>
-
 </section>
 
 <section id="ep" class="fade">
-
-<h2 class="section-title">НОВЫЙ ПОРЯДОК</h2>
-
+<h2 class="section-title" data-key="title-ep">НОВЫЙ ПОРЯДОК</h2>
 <div class="grid">
-
 <div>
 <img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
 </div>
-
 <div class="card">
-
-<h3>Tracklist</h3>
-
+<h3 data-key="ep-tracklist">Tracklist</h3>
 <br>
-
 <p>01 — Чёрный Дождь Мегаполиса</p>
 <p>02 — Рептилий Шёпот</p>
 <p>03 — Ночной Конверт</p>
 <p>04 — Чёрные Свечи</p>
-
 </div>
-
 </div>
-
 </section>
 
 <section id="listen" class="fade">
-
-<h2 class="section-title">ÉCOUTER L'EP</h2>
-
+<h2 class="section-title" data-key="title-listen">ÉCOUTER L'EP</h2>
 <div class="card">
-
-<p class="track">
-🎵 <a href="https://soundcloud.com/krovina/chyornyj-dozhd-megapolisa" target="_blank">Чёрный Дождь Мегаполиса</a>
-</p>
-
-<p class="track">
-🎵 <a href="https://soundcloud.com/krovina/reptilii-she-pot" target="_blank">Рептилий Шёпот</a>
-</p>
-
-<p class="track">
-🎵 <a href="https://soundcloud.com/krovina/nochnoi-konvert" target="_blank">Ночной Конверт</a>
-</p>
-
-<p class="track">
-🎵 <a href="https://soundcloud.com/krovina/che-rnyesvechi" target="_blank">Чёрные Свечи</a>
-</p>
-
+<p class="track">🎵 <a href="https://soundcloud.com/krovina/chyornyj-dozhd-megapolisa" target="_blank">Чёрный Дождь Мегаполиса</a></p>
+<p class="track">🎵 <a href="https://soundcloud.com/krovina/reptilii-she-pot" target="_blank">Рептилий Шёпот</a></p>
+<p class="track">🎵 <a href="https://soundcloud.com/krovina/nochnoi-konvert" target="_blank">Ночной Конверт</a></p>
+<p class="track">🎵 <a href="https://soundcloud.com/krovina/che-rnyesvechi" target="_blank">Чёрные Свечи</a></p>
 </div>
-
 </section>
 
 <section id="gallery" class="fade">
-
-<h2 class="section-title">GALERIE</h2>
-
+<h2 class="section-title" data-key="title-gallery">GALERIE</h2>
 <div class="gallery">
-
 <img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png">
 <img src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
 <img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
-
 </div>
-
 </section>
 
 <section class="fade">
-
-<div class="quote">
-
+<div class="quote" data-key="mid-quote">
 « La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »
-
 </div>
-
 </section>
 
 <section id="socials" class="fade">
-
-<h2 class="section-title">RÉSEAUX & STREAMING</h2>
-
+<h2 class="section-title" data-key="title-socials">RÉSEAUX & STREAMING</h2>
 <div class="socials">
-
 <a href="https://www.instagram.com/krovina.vorona" target="_blank">📸 Instagram</a>
-
 <a href="https://www.tiktok.com/@krovina495" target="_blank">🎵 TikTok</a>
-
 <a href="https://www.bandlab.com/krovina_vorona" target="_blank">🎧 BandLab</a>
-
 <a href="https://soundcloud.com/krovina" target="_blank">☁️ SoundCloud</a>
-
 </div>
-
 </section>
 
 <section id="contact" class="fade">
-
-<h2 class="section-title">CONTACT</h2>
-
+<h2 class="section-title" data-key="title-contact">CONTACT</h2>
 <div class="socials">
-
 <p>📧 krovina.vorona495@outlook.fr</p>
-
 </div>
-
 </section>
 
 <footer>
-
 <h2>КРОВИНА ВОРОНА</h2>
-
 <br>
-
-Independent Artist
-
+<span data-key="footer-sub">Independent Artist</span>
 <br>
-
 Moscow • Tbilisi • Saint Petersburg
-
 <br><br>
-
 © 2026 Krovina Vorona
-
 </footer>
 
 <script>
+const translations = {
+fr: {
+"nav-bio": "Bio", "nav-ep": "EP", "nav-listen": "Écouter", "nav-gallery": "Galerie", "nav-socials": "Réseaux", "nav-contact": "Contact",
+"hero-sub": "Artiste Indépendante • Ghostwriter • Parolière", "hero-quote": "« Entre le passé et le nouveau monde. »", "hero-btn": "Découvrir l'EP",
+"title-bio": "BIOGRAPHIE", "title-ep": "НОВЫЙ ПОРЯДОК", "title-listen": "ÉCOUTER L'EP", "title-gallery": "GALERIE", "title-socials": "RÉSEAUX & STREAMING", "title-contact": "CONTACT",
+"ep-tracklist": "Liste des titres", "footer-sub": "Artiste Indépendante",
+"mid-quote": "« La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »",
+"bio-html": `
+<p><strong>Nom complet :</strong> Krovina Maria Vorona Avalishvili<br><strong>Nom de scène :</strong> Krovina Vorona</p>
+<h3>── Les Racines ──</h3>
+<p>L'histoire de Krovina Vorona commence à Moscou, où elle voit le jour le 23 août 2001. Fruit de l'union entre un père russo-géorgien, ancien Ambassadeur de la Fédération de Russie, et une mère franco-italienne infirmière, elle grandit au rythme des salons diplomatiques avant de passer une grande partie de son enfance en Géorgie. Cet ancrage sauvage et mystique marquera à jamais sa sensibilité.</p>
+<h3>── Le Parcours ──</h3>
+<p>Artiste pluridisciplinaire, elle effectue un passage marquant par les arts du cirque à Saint-Pétersbourg, y développant un sens aigu de la théâtralité scénique. Soucieuse de contrôler sa vision, elle poursuit ensuite des études supérieures en audiovisuel, apprenant à structurer le récit et à penser la musique comme un film permanent.</p>
+<h3>── L'Émancipation ──</h3>
+<p>Son entrée dans l'industrie se fait sous l'égide du label Matriochka Records. Face à des différends artistiques et humains profonds, elle fait le choix courageux de rompre ses chaînes et de quitter la structure pour entamer une reconstruction totale. De cette rupture naît une artiste radicalement indépendante.</p>
+<h3>── L'Univers Artistique ──</h3>
+<p>Son œuvre explore les dualités humaines à travers des symboles forts : le Corbeau (Vorona), passeur entre les mondes, les bougies noires et la lune rouge. Sa musique fusionne l'électronique expérimentale, la Dark Pop, le Rock alternatif et un Rap alternatif conscient aux textes denses et théâtraux, injectant les complaintes d'Europe de l'Est dans des formats cinématographiques.</p>
+`
+},
+en: {
+"nav-bio": "Bio", "nav-ep": "EP", "nav-listen": "Listen", "nav-gallery": "Gallery", "nav-socials": "Socials", "nav-contact": "Contact",
+"hero-sub": "Independent Artist • Ghostwriter • Songwriter", "hero-quote": "“Between the past and the new world.”", "hero-btn": "Discover the EP",
+"title-bio": "BIOGRAPHY", "title-ep": "НОВЫЙ ПОРЯДОК", "title-listen": "LISTEN TO THE EP", "title-gallery": "GALLERY", "title-socials": "SOCIALS & STREAMING", "title-contact": "CONTACT",
+"ep-tracklist": "Tracklist", "footer-sub": "Independent Artist",
+"mid-quote": "“Music is a universal language capable of bringing human beings together despite their differences.”",
+"bio-html": `
+<p><strong>Full Name:</strong> Krovina Maria Vorona Avalishvili<br><strong>Stage Name:</strong> Krovina Vorona</p>
+<h3>── Roots ──</h3>
+<p>The story of Krovina Vorona begins in Moscow, where she was born on August 23, 2001. Born to a Russian-Georgian father, a former Ambassador of the Russian Federation, and a French-Italian mother who worked as a nurse, she grew up surrounded by diplomatic protocols before spending much of her childhood in Georgia. This wild, mystical landscape permanently shaped her artistic sensitivity.</p>
+<h3>── Journey ──</h3>
+<p>A multidisciplinary artist, her path included a notable period in the circus arts of Saint Petersburg, where she mastered stage presence and theatricality. To maintain total control over her visuals, she pursued advanced studies in audiovisual production, learning to direct her music like a continuous cinematic experience.</p>
+<h3>── Emancipation ──</h3>
+<p>She initially entered the music industry under the Matriochka Records label. However, faced with deep creative and personal differences, she made the courageous choice to break her chains and leave the label to completely rebuild herself. From this rupture emerged a fiercely independent artist.</p>
+<h3>── Artistic Universe ──</h3>
+<p>Her work explores human dualities through powerful symbols: the Raven (Vorona), a guide between worlds, black candles, and the red moon. Her sound fuses experimental electronics, Dark Pop, alternative Rock, and conscious alternative Rap with heavy, theatrical lyrics, blending Eastern European folk elements into a cinematic atmosphere.</p>
+`
+},
+ru: {
+"nav-bio": "Био", "nav-ep": "EP", "nav-listen": "Слушать", "nav-gallery": "Галерея", "nav-socials": "Соцсети", "nav-contact": "Контакты",
+"hero-sub": "Независимый артист • Гострайтер • Автор песен", "hero-quote": "«Между прошлым и новым миром».", "hero-btn": "Открыть EP",
+"title-bio": "БИОГРАФИЯ", "title-ep": "НОВЫЙ ПОРЯДОК", "title-listen": "СЛУШАТЬ EP", "title-gallery": "ГАЛЕРЕЯ", "title-socials": "СОЦСЕТИ И СТРИМИНГ", "title-contact": "КОНТАКТЫ",
+"ep-tracklist": "Треклист", "footer-sub": "Независимый артист",
+"mid-quote": "«Музыка — это универсальный язык, способный объединять людей, вопреки всем различиям».",
+"bio-html": `
+<p><strong>Полное имя:</strong> Кровина Мария Ворона Авалишвили<br><strong>Сценический псевдоним:</strong> Krovina Vorona</p>
+<h3>── Корни ──</h3>
+<p>История Кровины Вороны начинается в Москве, где она родилась 23 августа 2001 года. Дочь русско-грузинского отца, бывшего чрезвычайного посла Российской Федерации, и франко-итальянской матери, работавшей медсестрой. Её детство прошло в атмосфере дипломатических приемов, а затем — среди дикой и мистической природы Грузии, оставившей неизгладимый след в её душе.</p>
+<h3>── Путь ──</h3>
+<p>Разносторонний творец, она прошла яркий этап обучения цирковому искусству в Санкт-Петербурге, где отточила чувство сценической театральности. Желая полностью контролировать визуальную составляющую своего творчества, она получила высшее образование в сфере аудиовизуальных искусств, научившись воспринимать музыку как непрерывный кинофильм.</p>
+<h3>── Освобождение ──</h3>
+<p>Её путь в индустрии начался под эгидой лейбла Matriochka Records. Столкнувшись с глубокими творческими и личными разногласиями, она приняла смелое решение разорвать оковы и покинуть лейбл ради полного внутреннего перерождения. Из этого разрыва родилась радикально независимая артистка.</p>
+<h3>── Художественная вселенная ──</h3>
+<p>Её творчество исследует человеческую дуальность сквозь призму сильных символов: Ворон (Vorona) — проводник между мирами, черные свечи и красная луна. Музыка сочетает в себе экспериментальную электронику, селективный Dark Pop, альтернативный рок и осознанный альтернативный рэп с глубокими театральными текстами, облекая традиционные восточноевропейские мотивы в кинематографическую форму.</p>
+`
+},
+ka: {
+"nav-bio": "ბიო", "nav-ep": "EP", "nav-listen": "მოსმენა", "nav-gallery": "გალერეა", "nav-socials": "სოც. ქსელები", "nav-contact": "კონტაქტი",
+"hero-sub": "დამოუკიდებელი არტისტი • გოსთრაიტერი • კომპოზიტორი", "hero-quote": "„წარსულსა და ახალ სამყაროს შორის.“", "hero-btn": "EP-ის აღმოჩენა",
+"title-bio": "ბიოგრაფია", "title-ep": "НОВЫЙ ПОРЯДОК", "title-listen": "მოუსმინეთ EP-ს", "title-gallery": "გალერეა", "title-socials": "სოც. ქსელები & სტრიმინგი", "title-contact": "კონტაქტი",
+"ep-tracklist": "ტრეკლისტი", "footer-sub": "დამოუკიდებელი არტისტი",
+"mid-quote": "„მუსიკა არის უნივერსალური ენა, რომელსაც შეუძლია ადამიანების გაერთიანება მათ შორის არსებული განსხვავებების მიუხედავად.“",
+"bio-html": `
+<p><strong>სრული სახელი:</strong> კროვინა მარია ვორონა ავალიშვილი<br><strong>სასცენო სახელი:</strong> Krovina Vorona</p>
+<h3>── ფესვები ──</h3>
+<p>კროვინა ვორონას ისტორია იწყება მოსკოვში, სადაც იგი დაიბადა 2001 წლის 23 აგვისტოს. რუსი-ქართველი მამის — რუსეთის ფედერაციის ყოფილი ელჩის — და ფრანგულ-იტალიელი დედის (პროფესიით ექთნის) შვილი, დიპლომატიური სალონების გარემოში გაიზარდა, რის შემდეგაც ბავშვობის დიდი ნაწილი საქართველოში გაატარა. ამ ველურმა და მისტიკურმა მხარემ სამუდამოდ განსაზღვრა მისი შემოქმედებითი მგრძნობელობა.</p>
+<h3>── გზა ──</h3>
+<p>მულტიდისციპლინურმა არტისტმა მნიშვნელოვანი პერიოდი გაატარა სანქტ-პეტერბურგის ცირკის ხელოვნებაში, სადაც სცენური თეატრალურობის მძაფრი შეგრძნება განივითარა. საკუთარი ხედვის სრულყოფილად მართვის მიზნით, მან უმაღლესი განათლება აუდიოვიზუალურ ხელოვნებაში მიიღო, რითაც ისწავლა მუსიკის აღქმა, როგორც უწყვეტი კინოფილმის.</p>
+<h3>── ემანსიპაცია ──</h3>
+<p>მუსიკალურ ინდუსტრიაში მისი შესვლა ლეიბლ Matriochka Records-ის ეგიდით მოხდა. ღრმა შემოქმედებითი და პიროვნული უთანხმოებების გამო, მან მიიღო მამაცი გადაწყვეტილება, გაეწყვიტა კავშირი ლეიბლთან და დაეწყო სრული თვითაღდგენა. ამ განხეთქილებიდან დაიბადა რადიკალურად დამოუკიდებელი არტისტი.</p>
+<h3>── არტისტული სამყარო ──</h3>
+<p>მისი შემოქმედება იკვლევს ადამიანურ დუალიზმს ძლიერი სიმბოლოების მეშვეობით: ყორანი (Vorona) — მეგზური სამყაროებს შორის, შავი სანთლები და წითელი მთვარე. მისი მუსიკა აერთიანებს ექსპერიმენტულ ელექტრონიკას, Dark Pop-ს, ალტერნატიულ როკსა და გაცნობიერებულ ალტერნატიულ რეპს დენსური და თეატრალური ტექსტებით, რაც აღმოსავლეთ ევროპის ტრადიციულ მოტივებს კინემატოგრაფიულ ფორმატში აქცევს.</p>
+`
+}
+};
+
+function changeLanguage(lang) {
+    document.documentElement.lang = lang;
+    
+    // Mettre à jour les textes simples
+    document.querySelectorAll("[data-key]").forEach(element => {
+        const key = element.getAttribute("data-key");
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Mettre à jour la biographie riche en HTML
+    document.getElementById("bio-content").innerHTML = translations[lang]["bio-html"];
+}
+
+// Initialisation par défaut en français
+changeLanguage('fr');
 
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
@@ -429,9 +486,7 @@ entry.target.classList.add('show');
 document.querySelectorAll('.fade').forEach(el => {
 observer.observe(el);
 });
-
 </script>
 
 </body>
 </html>
-``
