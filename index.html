@@ -92,7 +92,7 @@ color: white;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url("3D8F2F7C-94CA-429B-80A7-34725A9B85A8.png");
 background-size:cover;
 background-position:center;
@@ -112,11 +112,13 @@ margin-bottom:20px;
 font-family:Cinzel,serif;
 font-size:4rem;
 letter-spacing:4px;
+text-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .hero h2{
 color:#ccc;
 margin-top:10px;
+letter-spacing: 2px;
 }
 
 .hero p{
@@ -132,6 +134,8 @@ border:1px solid white;
 color:white;
 text-decoration:none;
 transition:.3s;
+font-weight: 600;
+letter-spacing: 1px;
 }
 
 .btn:hover{
@@ -150,6 +154,7 @@ font-family:Cinzel,serif;
 font-size:2.6rem;
 text-align:center;
 margin-bottom:50px;
+letter-spacing: 2px;
 }
 
 .grid{
@@ -164,11 +169,20 @@ background:var(--card);
 padding:30px;
 border:1px solid #222;
 border-radius:15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card img{
 width:100%;
 border-radius:12px;
+}
+
+.bio-image-container img {
+width: 100%;
+border-radius: 12px;
+border: 1px solid #222;
+box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+object-fit: cover;
 }
 
 .bio-text p {
@@ -184,35 +198,48 @@ margin: 20px 0 10px 0;
 color: white;
 border-bottom: 1px solid #333;
 padding-bottom: 5px;
-}
-
-.bio-text ul {
-margin-left: 20px;
-margin-bottom: 15px;
-}
-
-.bio-text li {
-margin-bottom: 5px;
-color: #ccc;
+font-size: 1.2rem;
 }
 
 .track{
-margin:12px 0;
+margin:16px 0;
+font-size: 1.1rem;
+display: flex;
+align-items: center;
+gap: 10px;
 }
 
 .track a{
 color:white;
+text-decoration: none;
+transition: .3s;
+}
+
+.track a:hover{
+color: var(--accent);
+text-decoration: underline;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 .gallery img{
 width:100%;
+height: 500px;
+object-fit: cover;
 border-radius:12px;
+border: 1px solid #1a1a1a;
+transition: transform 0.4s ease, filter 0.4s ease;
+filter: brightness(85%) grayscale(15%);
+}
+
+.gallery img:hover{
+transform: scale(1.03);
+filter: brightness(100%) grayscale(0%);
+cursor: pointer;
 }
 
 .socials{
@@ -226,6 +253,13 @@ padding:14px 24px;
 border:1px solid white;
 color:white;
 text-decoration:none;
+font-weight: 600;
+transition: .3s;
+}
+
+.socials a:hover{
+background: white;
+color: black;
 }
 
 .quote{
@@ -235,18 +269,21 @@ font-style:italic;
 max-width:900px;
 margin:auto;
 line-height: 1.6;
+font-family: Cinzel, serif;
+color: #ccc;
 }
 
 footer{
 text-align:center;
-padding:50px;
+padding:60px 20px;
 border-top:1px solid #222;
+background: #020202;
 }
 
 .fade{
 opacity:0;
 transform:translateY(30px);
-transition:1s;
+transition:1s ease-in-out;
 }
 
 .fade.show{
@@ -257,14 +294,17 @@ transform:none;
 @media(max-width:900px){
 nav {
 flex-direction: column;
-gap: 10px;
-padding: 10px;
+gap: 15px;
+padding: 15px;
 }
 .hero h1{
 font-size:2.4rem;
 }
 .grid{
 grid-template-columns:1fr;
+}
+.gallery img{
+height: 450px;
 }
 }
 </style>
@@ -291,7 +331,7 @@ grid-template-columns:1fr;
 
 <header class="hero">
 <div>
-<img class="logo" src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
+<img class="logo" src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png" alt="Logo Krovina Vorona">
 <h1>КРОВИНА ВОРОНА</h1>
 <h2>KROVINA VORONA</h2>
 <p data-key="hero-sub">Independent Artist • Ghostwriter • Songwriter</p>
@@ -303,11 +343,12 @@ grid-template-columns:1fr;
 <section id="bio" class="fade">
 <h2 class="section-title" data-key="title-bio">BIOGRAPHIE</h2>
 <div class="grid">
-<div>
-<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png" style="width:100%; border-radius:12px;">
+<div class="bio-image-container">
+<!-- Image de Profil Intense Officielle -->
+<img src="19D52A46-5D89-46CF-9A56-74F76EC32A88.png" alt="Krovina Vorona Portrait">
 </div>
 <div class="card bio-text" id="bio-content">
-<!-- Rempli dynamiquement par JS -->
+<!-- Rempli dynamiquement par le JavaScript -->
 </div>
 </div>
 </section>
@@ -316,15 +357,14 @@ grid-template-columns:1fr;
 <h2 class="section-title" data-key="title-ep">НОВЫЙ ПОРЯДОК</h2>
 <div class="grid">
 <div>
-<img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
+<img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png" style="width:100%; border-radius:12px; border:1px solid #222;" alt="Nouvel Ordre EP Cover">
 </div>
-<div class="card">
-<h3 data-key="ep-tracklist">Tracklist</h3>
-<br>
-<p>01 — Чёрный Дождь Мегаполиса</p>
-<p>02 — Рептилий Шёпот</p>
-<p>03 — Ночной Конверт</p>
-<p>04 — Чёрные Свечи</p>
+<div class="card" style="display: flex; flex-direction: column; justify-content: center;">
+<h3 data-key="ep-tracklist" style="font-size: 1.8rem; margin-top: 0; padding-bottom: 15px;">Tracklist</h3>
+<p style="font-size: 1.1rem; margin-bottom: 10px;">01 — Чёрный Дождь Мегаполиса</p>
+<p style="font-size: 1.1rem; margin-bottom: 10px;">02 — Рептилий Шёпот</p>
+<p style="font-size: 1.1rem; margin-bottom: 10px;">03 — Ночной Конверт</p>
+<p style="font-size: 1.1rem; margin-bottom: 10px;">04 — Чёрные Свечи</p>
 </div>
 </div>
 </section>
@@ -332,19 +372,22 @@ grid-template-columns:1fr;
 <section id="listen" class="fade">
 <h2 class="section-title" data-key="title-listen">ÉCOUTER L'EP</h2>
 <div class="card">
-<p class="track">🎵 <a href="https://soundcloud.com/krovina/chyornyj-dozhd-megapolisa" target="_blank">Чёрный Дождь Мегаполиса</a></p>
-<p class="track">🎵 <a href="https://soundcloud.com/krovina/reptilii-she-pot" target="_blank">Рептилий Шёпот</a></p>
-<p class="track">🎵 <a href="https://soundcloud.com/krovina/nochnoi-konvert" target="_blank">Ночной Конверт</a></p>
-<p class="track">🎵 <a href="https://soundcloud.com/krovina/che-rnyesvechi" target="_blank">Чёрные Свечи</a></p>
+<p class="track">☁️ <a href="https://soundcloud.com/krovina/chyornyj-dozhd-megapolisa" target="_blank">Чёрный Дождь Мегаполиса</a></p>
+<p class="track">☁️ <a href="https://soundcloud.com/krovina/reptilii-she-pot" target="_blank">Рептилий Шёпот</a></p>
+<p class="track">☁️ <a href="https://soundcloud.com/krovina/nochnoi-konvert" target="_blank">Ночной Конверт</a></p>
+<p class="track">☁️ <a href="https://soundcloud.com/krovina/che-rnyesvechi" target="_blank">Чёрные Свечи</a></p>
 </div>
 </section>
 
 <section id="gallery" class="fade">
 <h2 class="section-title" data-key="title-gallery">GALERIE</h2>
 <div class="gallery">
-<img src="D67B683F-A4CD-4049-9C38-C2A90C65FD16.png">
-<img src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
-<img src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png">
+<!-- Grille complète intégrant l'intégralité du shooting officiel -->
+<img src="D370F822-448B-4EEF-BA6E-5E0FC411D803.png" alt="Krovina Vorona - Rose">
+<img src="2746AA04-050E-4540-9AAF-927723048A2B.png" alt="Krovina Vorona - Car Night Ride">
+<img src="IMG_5520.png" alt="Krovina Vorona - Studio Shoot">
+<img src="7803CACA-7B01-46BB-9F39-74FB6C15057B.png" alt="Krovina Vorona - Backstage Smile">
+<img src="19D52A46-5D89-46CF-9A56-74F76EC32A88.png" alt="Krovina Vorona - Intense Look">
 </div>
 </section>
 
@@ -367,7 +410,7 @@ grid-template-columns:1fr;
 <section id="contact" class="fade">
 <h2 class="section-title" data-key="title-contact">CONTACT</h2>
 <div class="socials">
-<p>📧 krovina.vorona495@outlook.fr</p>
+<p style="font-size: 1.2rem; letter-spacing: 1px;">📧 krovina.vorona495@outlook.fr</p>
 </div>
 </section>
 
@@ -375,7 +418,7 @@ grid-template-columns:1fr;
 <h2>КРОВИНА ВОРОНА</h2>
 <br>
 <span data-key="footer-sub">Independent Artist</span>
-<br>
+<br><br>
 Moscow • Tbilisi • Saint Petersburg
 <br><br>
 © 2026 Krovina Vorona
@@ -452,7 +495,7 @@ ka: {
 <h3>── ემანსიპაცია ──</h3>
 <p>მუსიკალურ ინდუსტრიაში მისი შესვლა ლეიბლ Matriochka Records-ის ეგიდით მოხდა. ღრმა შემოქმედებითი და პიროვნული უთანხმოებების გამო, მან მიიღო მამაცი გადაწყვეტილება, გაეწყვიტა კავშირი ლეიბლთან და დაეწყო სრული თვითაღდგენა. ამ განხეთქილებიდან დაიბადა რადიკალურად დამოუკიდებელი არტისტი.</p>
 <h3>── არტისტული სამყარო ──</h3>
-<p>მისი შემოქმედება იკვლევს ადამიანურ დუალიზმს ძლიერი სიმბოლოების მეშვეობით: ყორანი (Vorona) — მეგზური სამყაროებს შორის, შავი სანთლები და წითელი მთვარე. მისი მუსიკა აერთიანებს ექსპერიმენტულ ელექტრონიკას, Dark Pop-ს, ალტერნატიულ როკსა და გაცნობიერებულ ალტერნატიულ რეპს დენსური და თეატრალური ტექსტებით, რაც აღმოსავლეთ ევროპის ტრადიციულ მოტივებს კინემატოგრაფიულ ფორმატში აქცევს.</p>
+<p>მისი შემოქმედება იკვლევს ადამიანურ დუალიზმს ძლიერი სიმბოლოების მეშვეობით: ყორანი (Vorona) — მეგზური სამყაროებს შორის, შავი სანთლები და წითელი მთვარე. მისი mუსიკა აერთიანებს ექსპერიმენტულ ელექტრონიკას, Dark Pop-ს, ალტერნატიულ როკსა და გაცნობიერებულ ალტერნატიულ რეპს დენსური და თეატრალური ტექსტებით, რაც აღმოსავლეთ ევროპის ტრადიციულ მოტივებს კინემატოგრაფიულ ფორმატში აქცევს.</p>
 `
 }
 };
