@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,34 +6,48 @@
 
 <title>Krovina Vorona | Official</title>
 
-<meta name="description" content="Krovina Vorona — artiste indépendante russo-franco-géorgienne. Musique, mysticisme, spiritualité et mondes cinématographiques.">
+<meta name="description"
+content="Krovina Vorona — artiste indépendante. Nouvel Ordre. Entre les mondes.">
+
+<meta name="theme-color" content="#02030a">
 
 <meta property="og:title" content="Krovina Vorona">
-<meta property="og:description" content="Official website of Krovina Vorona">
-<meta property="og:image" content="94E6FE95-D340-4C31-A3B5-E02E1891F429.png">
-<meta property="og:type" content="website">
+<meta property="og:description"
+content="Nouvel Ordre — projet actuel. Entre les mondes — prochain projet.">
+<meta property="og:image"
+content="94E6FE95-D340-4C31-A3B5-E02E1891F429.png">
 
-<link rel="icon" href="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-rel="stylesheet">
+<link rel="icon"
+href="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
     --bg:#02030a;
-    --bg2:#070b1c;
-    --blue:#6f8cff;
-    --violet:#9b6cff;
+    --bg2:#060817;
+    --bg3:#0a1022;
+
+    --blue:#718dff;
+    --violet:#9d70ff;
+
+    --green:#71966e;
+    --green-dark:#142718;
+
     --white:#f5f6ff;
-    --muted:#aab1ca;
+    --muted:#aeb5cc;
+
     --line:rgba(255,255,255,.12);
-    --card:rgba(7,10,27,.76);
+
+    --card:rgba(7,10,27,.78);
 }
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -49,50 +62,86 @@ html{
 
 body{
     color:var(--white);
-    font-family:Inter,sans-serif;
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background:
-        radial-gradient(circle at 15% 15%,rgba(66,90,190,.18),transparent 28%),
-        radial-gradient(circle at 85% 60%,rgba(122,64,190,.16),transparent 32%),
-        linear-gradient(180deg,#02030a,#050817 55%,#02030a);
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(66,90,190,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 55%,
+            rgba(122,64,190,.15),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #02030a 0%,
+            #050817 50%,
+            #02030a 100%
+        );
 
     overflow-x:hidden;
 }
 
-/* STAR FIELD */
-
-body:before{
+body::before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
     z-index:-1;
-    opacity:.55;
+    opacity:.45;
 
     background-image:
-        radial-gradient(circle,rgba(255,255,255,.8) 0 1px,transparent 1.5px),
-        radial-gradient(circle,rgba(140,160,255,.55) 0 1px,transparent 1.5px);
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 0 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(140,160,255,.55) 0 1px,
+            transparent 1.5px
+        );
 
-    background-size:180px 180px,310px 310px;
-    background-position:20px 30px,90px 120px;
+    background-size:
+        180px 180px,
+        310px 310px;
+
+    background-position:
+        20px 30px,
+        90px 120px;
 }
 
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
     min-height:72px;
+
     z-index:1000;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:rgba(2,3,10,.78);
+    padding:10px 90px 10px 20px;
+
+    background:rgba(2,3,10,.82);
+
     backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     border-bottom:1px solid var(--line);
 }
@@ -100,36 +149,52 @@ nav{
 nav ul{
     display:flex;
     gap:28px;
+
     list-style:none;
+
     align-items:center;
+    justify-content:center;
+
+    flex-wrap:wrap;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-size:.72rem;
+
+    font-size:.68rem;
     letter-spacing:2px;
     text-transform:uppercase;
+
     opacity:.82;
+
     transition:.3s;
 }
 
 nav a:hover{
     opacity:1;
-    text-shadow:0 0 18px rgba(130,150,255,.8);
+
+    text-shadow:
+        0 0 18px rgba(130,150,255,.8);
 }
 
 .lang-selector{
     position:absolute;
-    right:22px;
+    right:20px;
 
     background:rgba(255,255,255,.04);
+
     color:white;
 
     border:1px solid var(--line);
+
     padding:8px 10px;
 
-    font:600 .7rem Inter;
+    font:
+        600 .68rem
+        Arial,
+        sans-serif;
+
     cursor:pointer;
 }
 
@@ -138,64 +203,180 @@ nav a:hover{
     color:white;
 }
 
-/* HERO */
+/* =========================================================
+   GENERAL
+========================================================= */
+
+section{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+        115px
+        22px;
+}
+
+.section-head{
+    text-align:center;
+
+    margin-bottom:52px;
+}
+
+.kicker{
+    font-size:.62rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#7b89b7;
+
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:500;
+
+    font-size:
+        clamp(2rem,5vw,3.4rem);
+
+    letter-spacing:4px;
+}
+
+.line{
+    width:70px;
+    height:1px;
+
+    background:
+        rgba(150,170,255,.6);
+
+    margin:20px auto 0;
+
+    box-shadow:
+        0 0 18px
+        rgba(100,130,255,.5);
+}
+
+.card{
+    background:var(--card);
+
+    border:1px solid var(--line);
+
+    padding:32px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
     min-height:100vh;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     text-align:center;
 
-    padding:110px 20px 70px;
+    padding:
+        120px
+        20px
+        80px;
 
     position:relative;
+
     overflow:hidden;
 
     background:
-        linear-gradient(rgba(2,3,10,.34),rgba(2,3,10,.82)),
-        url("94E6FE95-D340-4C31-A3B5-E02E1891F429.png") center/cover no-repeat;
+        linear-gradient(
+            rgba(2,3,10,.35),
+            rgba(2,3,10,.88)
+        ),
+        url("94E6FE95-D340-4C31-A3B5-E02E1891F429.png")
+        center/cover
+        no-repeat;
 }
 
-.hero:after{
+.hero::after{
     content:"";
+
     position:absolute;
+
     inset:0;
 
     background:
-        radial-gradient(circle,transparent 20%,rgba(2,3,10,.35) 65%,rgba(2,3,10,.9) 100%);
+        radial-gradient(
+            circle,
+            transparent 18%,
+            rgba(2,3,10,.35) 62%,
+            rgba(2,3,10,.95) 100%
+        );
 }
 
 .hero-content{
     position:relative;
+
     z-index:2;
+
     max-width:1000px;
 }
 
 .logo{
     width:125px;
     height:125px;
+
     object-fit:contain;
 
-    filter:drop-shadow(0 0 25px rgba(120,145,255,.55));
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(120,145,255,.55)
+        );
 
     margin-bottom:25px;
 }
 
 .hero h1{
-    font:500 clamp(2.5rem,7vw,6.2rem) Cinzel,serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:500;
+
+    font-size:
+        clamp(2.4rem,7vw,6.2rem);
+
     letter-spacing:9px;
 
-    text-shadow:0 0 35px rgba(110,130,255,.3);
+    text-shadow:
+        0 0 35px
+        rgba(110,130,255,.3);
 }
 
 .hero h2{
     margin-top:16px;
 
-    font-size:.8rem;
+    font-size:.78rem;
+
     letter-spacing:7px;
+
     color:#c7cce0;
+
     font-weight:300;
 }
 
@@ -203,6 +384,7 @@ nav a:hover{
     margin-top:28px;
 
     font-size:.78rem;
+
     letter-spacing:4px;
 
     text-transform:uppercase;
@@ -213,15 +395,24 @@ nav a:hover{
 .hero-quote{
     margin-top:18px;
 
-    font:italic 1.05rem Cinzel;
+    font-family:
+        Georgia,
+        serif;
+
+    font-style:italic;
+
+    font-size:1.05rem;
+
     color:#aab5d6;
 }
 
 .buttons{
     display:flex;
+
     gap:14px;
 
     justify-content:center;
+
     flex-wrap:wrap;
 
     margin-top:34px;
@@ -230,19 +421,28 @@ nav a:hover{
 .btn{
     display:inline-flex;
 
-    padding:13px 24px;
+    align-items:center;
+    justify-content:center;
 
-    border:1px solid rgba(255,255,255,.35);
+    padding:
+        13px 24px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
 
     color:white;
+
     text-decoration:none;
 
     letter-spacing:2px;
+
     font-size:.72rem;
 
     text-transform:uppercase;
 
-    background:rgba(255,255,255,.035);
+    background:
+        rgba(255,255,255,.035);
 
     transition:.3s;
 
@@ -251,91 +451,45 @@ nav a:hover{
 
 .btn:hover{
     background:white;
+
     color:#03040a;
 
-    box-shadow:0 0 30px rgba(120,140,255,.35);
+    box-shadow:
+        0 0 30px
+        rgba(120,140,255,.35);
 }
 
-/* SECTIONS */
-
-section{
-    max-width:1200px;
-    margin:auto;
-
-    padding:105px 22px;
-}
-
-.section-head{
-    text-align:center;
-    margin-bottom:52px;
-}
-
-.kicker{
-    font-size:.62rem;
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    color:#7180ad;
-
-    margin-bottom:12px;
-}
-
-.section-title{
-    font:500 clamp(1.9rem,5vw,3rem) Cinzel;
-    letter-spacing:4px;
-}
-
-.line{
-    width:70px;
-    height:1px;
-
-    background:rgba(150,170,255,.6);
-
-    margin:20px auto 0;
-
-    box-shadow:0 0 18px rgba(100,130,255,.5);
-}
-
-/* BIO */
+/* =========================================================
+   BIO
+========================================================= */
 
 .bio-grid{
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap:55px;
 
     align-items:center;
 }
 
-.bio-image img,
-.gallery img,
-.cover{
+.bio-image img{
     width:100%;
 
     display:block;
 
-    border:1px solid var(--line);
-
-    box-shadow:0 25px 70px rgba(0,0,0,.55);
-}
-
-.bio-image img{
     max-height:720px;
+
     object-fit:cover;
-}
 
-.card{
-    background:var(--card);
+    border:
+        1px solid
+        var(--line);
 
-    border:1px solid var(--line);
-
-    padding:32px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-
-    backdrop-filter:blur(15px);
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.55);
 }
 
 .bio-text{
@@ -355,60 +509,226 @@ section{
 }
 
 .bio-text h3{
-    font:500 1rem Cinzel;
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight:500;
+
+    font-size:1rem;
 
     letter-spacing:2px;
 
     color:white;
 
-    margin:28px 0 10px;
+    margin:
+        28px
+        0
+        10px;
 }
 
-/* EP */
+/* =========================================================
+   CURRENT PROJECT — NOUVEL ORDRE
+========================================================= */
 
-.ep-grid{
+.current-project{
+    position:relative;
+
+    padding-top:125px;
+}
+
+.current-project::before{
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    top:5%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(70,120,70,.13),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.project-status{
+    text-align:center;
+
+    margin-bottom:25px;
+}
+
+.status-badge{
+    display:inline-block;
+
+    padding:
+        9px 18px;
+
+    border:
+        1px solid
+        rgba(140,180,130,.35);
+
+    color:#b8cfae;
+
+    background:
+        rgba(40,75,40,.18);
+
+    font-size:.62rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.current-layout{
     display:grid;
 
-    grid-template-columns:minmax(300px,470px) 1fr;
+    grid-template-columns:
+        minmax(300px,520px)
+        1fr;
 
-    gap:60px;
+    gap:65px;
 
     align-items:center;
 }
 
-.ep-copy h3{
-    font:500 2rem Cinzel;
+.current-cover{
+    width:100%;
 
-    letter-spacing:3px;
+    display:block;
 
-    margin-bottom:15px;
+    border:
+        1px solid
+        rgba(145,180,130,.25);
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,.7);
+
+    transition:.5s;
 }
 
-.ep-copy p{
+.current-cover:hover{
+    transform:
+        scale(1.015);
+
+    box-shadow:
+        0 40px 110px
+        rgba(70,120,70,.18);
+}
+
+.project-copy h3{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:500;
+
+    font-size:
+        clamp(2rem,4vw,3.5rem);
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+}
+
+.project-russian{
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:1.1rem;
+
+    letter-spacing:4px;
+
+    color:#b9c9b0;
+
+    margin-bottom:25px;
+}
+
+.project-copy p{
     color:var(--muted);
 
     line-height:1.8;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
-/* QUOTE */
-
-.quote{
-    text-align:center;
-
-    max-width:850px;
-
-    margin:auto;
-
-    color:#b8bfd5;
-
-    font:italic clamp(1.1rem,2vw,1.45rem) Cinzel;
-
-    line-height:1.7;
+.project-description{
+    font-size:.95rem;
 }
 
-/* AUDIO */
+.tracklist{
+    margin-top:30px;
+
+    border-top:
+        1px solid
+        var(--line);
+}
+
+.track{
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:
+        17px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.track-number{
+    width:34px;
+
+    color:#7f9679;
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+}
+
+.track-title{
+    flex:1;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:.95rem;
+
+    letter-spacing:1px;
+}
+
+.track-language{
+    font-size:.58rem;
+
+    letter-spacing:2px;
+
+    color:#737b91;
+
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   AUDIO
+========================================================= */
+
+.audio-section{
+    max-width:1000px;
+}
 
 .audio-list{
     display:grid;
@@ -419,9 +739,10 @@ section{
 .audio-card{
     display:grid;
 
-    grid-template-columns:72px 1fr;
+    grid-template-columns:
+        90px 1fr;
 
-    gap:20px;
+    gap:22px;
 
     align-items:center;
 
@@ -434,26 +755,34 @@ section{
             rgba(5,7,20,.82)
         );
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
-    box-shadow:0 15px 45px rgba(0,0,0,.35);
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,.35);
 
     transition:.3s;
 }
 
 .audio-card:hover{
-    border-color:rgba(130,150,255,.35);
+    border-color:
+        rgba(130,150,255,.35);
 
-    transform:translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 .audio-cover{
-    width:72px;
-    height:72px;
+    width:90px;
+    height:90px;
 
     object-fit:cover;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        rgba(255,255,255,.15);
 }
 
 .audio-meta .label{
@@ -465,11 +794,15 @@ section{
 
     text-transform:uppercase;
 
-    margin-bottom:6px;
+    margin-bottom:7px;
 }
 
 .audio-title{
-    font:500 1rem Cinzel;
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:1.05rem;
 
     letter-spacing:1px;
 
@@ -478,18 +811,186 @@ section{
 
 audio{
     width:100%;
+
     height:40px;
 
-    filter:invert(1) opacity(.9);
+    filter:
+        invert(1)
+        opacity(.9);
 }
 
-/* GALLERY */
+/* =========================================================
+   UPCOMING PROJECT — ENTRE LES MONDES
+========================================================= */
+
+.upcoming{
+    max-width:1200px;
+
+    text-align:center;
+
+    padding-top:140px;
+    padding-bottom:140px;
+}
+
+.upcoming-intro{
+    max-width:850px;
+
+    margin:
+        0 auto
+        40px;
+
+    color:#b8bfd5;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+}
+
+.upcoming-cover-wrap{
+    position:relative;
+
+    max-width:900px;
+
+    margin:
+        0 auto
+        50px;
+}
+
+.upcoming-cover-wrap::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-25px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(90,110,255,.18),
+            transparent 68%
+        );
+
+    z-index:-1;
+}
+
+.upcoming-cover{
+    width:100%;
+
+    display:block;
+
+    border:
+        1px solid
+        rgba(150,170,255,.25);
+
+    box-shadow:
+        0 40px 120px
+        rgba(0,0,0,.72);
+}
+
+.upcoming-title{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2.4rem,6vw,5rem);
+
+    font-weight:500;
+
+    letter-spacing:7px;
+
+    margin-bottom:15px;
+}
+
+.upcoming-russian{
+    font-size:1.1rem;
+
+    letter-spacing:5px;
+
+    color:#aab8df;
+
+    margin-bottom:25px;
+}
+
+.upcoming-label{
+    display:inline-block;
+
+    margin-bottom:28px;
+
+    padding:
+        10px 20px;
+
+    border:
+        1px solid
+        rgba(150,170,255,.35);
+
+    background:
+        rgba(80,90,160,.08);
+
+    color:#b8c2e4;
+
+    font-size:.62rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.upcoming-text{
+    max-width:750px;
+
+    margin:auto;
+
+    color:#aeb5cc;
+
+    line-height:1.85;
+
+    font-size:.95rem;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-section{
+    padding:
+        80px 22px;
+}
+
+.quote{
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#b8bfd5;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-style:italic;
+
+    font-size:
+        clamp(1.1rem,2vw,1.45rem);
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
 
 .gallery{
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(230px,1fr));
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
 
     gap:18px;
 }
@@ -499,28 +1000,37 @@ audio{
 
     aspect-ratio:4/5;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
     background:#050711;
 }
 
 .gallery-item img{
+    width:100%;
     height:100%;
 
     object-fit:cover;
 
     transition:.6s;
 
-    filter:brightness(.8) saturate(.9);
+    filter:
+        brightness(.82)
+        saturate(.9);
 }
 
 .gallery-item:hover img{
     transform:scale(1.05);
 
-    filter:brightness(1) saturate(1);
+    filter:
+        brightness(1)
+        saturate(1);
 }
 
-/* SOCIALS */
+/* =========================================================
+   SOCIALS
+========================================================= */
 
 .socials{
     display:flex;
@@ -537,9 +1047,12 @@ audio{
 
     text-decoration:none;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
-    padding:13px 20px;
+    padding:
+        13px 20px;
 
     letter-spacing:1px;
 
@@ -550,10 +1063,13 @@ audio{
 
 .socials a:hover{
     background:white;
+
     color:#03040a;
 }
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact{
     text-align:center;
@@ -565,24 +1081,25 @@ audio{
     color:white;
 
     text-decoration:none;
-
-    font-size:1.05rem;
-
-    letter-spacing:1px;
 }
 
 .contact a:hover{
-    text-shadow:0 0 18px rgba(130,150,255,.8);
+    text-decoration:underline;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
     text-align:center;
 
-    padding:60px 20px;
+    padding:
+        65px 20px;
 
-    border-top:1px solid var(--line);
+    border-top:
+        1px solid
+        var(--line);
 
     color:#a8aec3;
 
@@ -590,7 +1107,13 @@ footer{
 }
 
 footer h2{
-    font:500 1.5rem Cinzel;
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight:500;
+
+    font-size:1.5rem;
 
     color:white;
 
@@ -599,12 +1122,15 @@ footer h2{
     margin-bottom:14px;
 }
 
-/* ANIMATION */
+/* =========================================================
+   ANIMATION
+========================================================= */
 
 .fade{
     opacity:0;
 
-    transform:translateY(25px);
+    transform:
+        translateY(25px);
 
     transition:
         opacity .9s,
@@ -617,42 +1143,28 @@ footer h2{
     transform:none;
 }
 
-/* AUDIO ACTIVE */
-
-.audio-card.playing{
-    border-color:rgba(130,150,255,.65);
-
-    box-shadow:
-        0 0 30px rgba(100,120,255,.15),
-        0 15px 45px rgba(0,0,0,.35);
-}
-
-/* MOBILE */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media(max-width:850px){
 
     nav{
-        height:auto;
-
         min-height:68px;
 
         padding:
             10px
-            60px
+            65px
             10px
             10px;
     }
 
     nav ul{
         gap:12px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
     }
 
     nav a{
-        font-size:.58rem;
+        font-size:.57rem;
 
         letter-spacing:1px;
     }
@@ -671,18 +1183,18 @@ footer h2{
         letter-spacing:4px;
     }
 
-    .hero-sub{
-        letter-spacing:2px;
-        line-height:1.7;
-    }
-
     .bio-grid,
-    .ep-grid{
+    .current-layout{
         grid-template-columns:1fr;
     }
 
     section{
-        padding:80px 16px;
+        padding:
+            85px 16px;
+    }
+
+    .current-project{
+        padding-top:95px;
     }
 
     .audio-card{
@@ -690,47 +1202,137 @@ footer h2{
     }
 
     .audio-cover{
-        width:80px;
-        height:80px;
+        width:85px;
+        height:85px;
     }
+
+    .track{
+        gap:10px;
+    }
+
+    .track-language{
+        display:none;
+    }
+
+    .upcoming{
+        padding:
+            100px 16px;
+    }
+
+    .upcoming-title{
+        letter-spacing:4px;
+    }
+
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:500px){
+
+    .hero{
+        padding:
+            110px
+            15px
+            70px;
+    }
+
+    .logo{
+        width:100px;
+        height:100px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+
+        letter-spacing:3px;
+    }
+
+    .hero-sub{
+        font-size:.62rem;
+
+        letter-spacing:2px;
+    }
+
+    .hero-quote{
+        font-size:.9rem;
+    }
+
+    .project-copy h3{
+        font-size:2rem;
+    }
+
+    .current-cover{
+        box-shadow:
+            0 25px 70px
+            rgba(0,0,0,.7);
+    }
+
+    .upcoming-cover-wrap{
+        margin-bottom:35px;
+    }
+
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
 
 <nav>
 
 <ul>
 
 <li>
-<a href="#bio" data-key="nav-bio">Bio</a>
+<a href="#bio" data-key="nav-bio">
+Bio
+</a>
 </li>
 
 <li>
-<a href="#ep" data-key="nav-ep">EP</a>
+<a href="#current" data-key="nav-current">
+Projet actuel
+</a>
 </li>
 
 <li>
-<a href="#listen" data-key="nav-listen">Écouter</a>
+<a href="#listen" data-key="nav-listen">
+Écouter
+</a>
 </li>
 
 <li>
-<a href="#gallery" data-key="nav-gallery">Galerie</a>
+<a href="#upcoming" data-key="nav-upcoming">
+Prochain projet
+</a>
 </li>
 
 <li>
-<a href="#socials" data-key="nav-socials">Réseaux</a>
+<a href="#gallery" data-key="nav-gallery">
+Galerie
+</a>
 </li>
 
 <li>
-<a href="#contact" data-key="nav-contact">Contact</a>
+<a href="#socials" data-key="nav-socials">
+Réseaux
+</a>
+</li>
+
+<li>
+<a href="#contact" data-key="nav-contact">
+Contact
+</a>
 </li>
 
 </ul>
+
 
 <select
 class="lang-selector"
@@ -747,7 +1349,9 @@ aria-label="Language">
 </nav>
 
 
-<!-- HERO -->
+<!-- =======================================================
+     HERO
+======================================================= -->
 
 <header class="hero">
 
@@ -758,9 +1362,13 @@ class="logo"
 src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png"
 alt="Krovina Vorona">
 
-<h1>КРОВИНА ВОРОНА</h1>
+<h1>
+КРОВИНА ВОРОНА
+</h1>
 
-<h2>KROVINA VORONA</h2>
+<h2>
+KROVINA VORONA
+</h2>
 
 <p
 class="hero-sub"
@@ -771,22 +1379,22 @@ Artiste indépendante • Ghostwriter • Parolière
 <p
 class="hero-quote"
 data-key="hero-quote">
-« Entre le passé et le nouveau monde. »
+« Entre l'ombre et la lumière. »
 </p>
 
 <div class="buttons">
 
 <a
 class="btn"
-href="#listen"
-data-key="hero-btn">
-Écouter
+href="#current"
+data-key="hero-current">
+Projet actuel
 </a>
 
 <a
 class="btn"
-href="#ep"
-data-key="hero-btn2">
+href="#upcoming"
+data-key="hero-upcoming">
 Entre les mondes
 </a>
 
@@ -797,9 +1405,13 @@ Entre les mondes
 </header>
 
 
-<!-- BIO -->
+<!-- =======================================================
+     BIO
+======================================================= -->
 
-<section id="bio" class="fade">
+<section
+id="bio"
+class="fade">
 
 <div class="section-head">
 
@@ -839,18 +1451,23 @@ id="bio-content">
 </section>
 
 
-<!-- EP -->
+<!-- =======================================================
+     CURRENT PROJECT — NOUVEL ORDRE
+======================================================= -->
 
-<section id="ep" class="fade">
+<section
+id="current"
+class="fade current-project">
 
 <div class="section-head">
 
 <div class="kicker">
-NEW PROJECT
+CURRENT PROJECT
 </div>
 
-<h2 class="section-title">
-МЕЖДУ МИРАМИ
+<h2
+class="section-title">
+НОВЫЙ ПОРЯДОК
 </h2>
 
 <div class="line"></div>
@@ -858,44 +1475,153 @@ NEW PROJECT
 </div>
 
 
-<div class="ep-grid">
+<div class="project-status">
+
+<span class="status-badge"
+data-key="current-badge">
+Projet actuel
+</span>
+
+</div>
+
+
+<div class="current-layout">
+
+
+<!-- COVER VERTE -->
 
 <div>
 
 <img
-class="cover"
+class="current-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="Krovina Vorona — Entre les mondes">
+alt="Nouvel Ordre — Krovina Vorona">
 
 </div>
 
 
-<div class="ep-copy">
+<!-- INFORMATIONS -->
+
+<div class="project-copy">
 
 <h3>
-Entre les mondes
+Nouvel Ordre
 </h3>
 
+<div class="project-russian">
+НОВЫЙ ПОРЯДОК
+</div>
+
 <p
-data-key="ep-description">
-Un univers situé entre le rêve et la réalité,
-l'amour et la solitude, l'ombre et la lumière.
-Une exploration mystique et personnelle de
-Krovina Vorona.
+class="project-description"
+data-key="current-description">
+
+Le projet actuel de Krovina Vorona.
+Un univers mystique et sombre où se rencontrent
+spiritualité, amour, société, occultisme,
+symbolisme et recherche de vérité.
+
 </p>
 
-<p>
-<strong>МЕЖДУ МИРАМИ</strong>
-<br>
-Любовь • Душа • Звёзды • Путь к себе
+<p
+data-key="current-description-2">
+
+La musique traverse plusieurs langues et plusieurs
+univers pour construire une identité entre rap,
+rock, électronique et atmosphères cinématographiques.
+
 </p>
 
-<a
-class="btn"
-href="#listen"
-data-key="ep-listen">
-Écouter les morceaux
-</a>
+
+<!-- TRACKLIST -->
+
+<div class="tracklist">
+
+<div class="track">
+
+<div class="track-number">
+01
+</div>
+
+<div class="track-title">
+матрица пепла
+</div>
+
+<div class="track-language">
+RU
+</div>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+02
+</div>
+
+<div class="track-title">
+Кавказское Небо
+</div>
+
+<div class="track-language">
+GE • RU
+</div>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+03
+</div>
+
+<div class="track-title">
+чёрныесвечи
+</div>
+
+<div class="track-language">
+RU
+</div>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+04
+</div>
+
+<div class="track-title">
+Пока мир горит
+</div>
+
+<div class="track-language">
+RU
+</div>
+
+</div>
+
+
+<div class="track">
+
+<div class="track-number">
+05
+</div>
+
+<div class="track-title">
+Tra inferno E paradiso
+</div>
+
+<div class="track-language">
+IT
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -904,25 +1630,13 @@ data-key="ep-listen">
 </section>
 
 
-<!-- QUOTE -->
+<!-- =======================================================
+     AUDIO — NOUVEL ORDRE
+======================================================= -->
 
-<section class="fade">
-
-<div
-class="quote"
-data-key="quote">
-
-« La musique est un langage universel capable
-de rapprocher les êtres humains malgré leurs différences. »
-
-</div>
-
-</section>
-
-
-<!-- AUDIO -->
-
-<section id="listen" class="fade">
+<section
+id="listen"
+class="fade audio-section">
 
 <div class="section-head">
 
@@ -951,7 +1665,7 @@ data-key="title-listen">
 <img
 class="audio-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="матрица пепла">
+alt="Nouvel Ordre">
 
 <div class="audio-meta">
 
@@ -981,7 +1695,7 @@ src="матрица пепла - Krovina VORONA - SoundLoadMate.com.mp3">
 <img
 class="audio-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="Кавказское Небо">
+alt="Nouvel Ordre">
 
 <div class="audio-meta">
 
@@ -990,7 +1704,7 @@ alt="Кавказское Небо">
 </div>
 
 <div class="audio-title">
-Кавказское Небо 🇬🇪🇷🇺
+Кавказское Небо
 </div>
 
 <audio
@@ -1011,7 +1725,7 @@ src="Кавказское Небо 🇬🇪🇷🇺 - Krovina VORONA - SoundLoad
 <img
 class="audio-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="чёрные свечи">
+alt="Nouvel Ordre">
 
 <div class="audio-meta">
 
@@ -1020,7 +1734,7 @@ alt="чёрные свечи">
 </div>
 
 <div class="audio-title">
-чёрные свечи
+чёрныесвечи
 </div>
 
 <audio
@@ -1041,7 +1755,7 @@ src="чёрныесвечи - Krovina VORONA - SoundLoadMate.com.mp3">
 <img
 class="audio-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="Пока мир горит">
+alt="Nouvel Ordre">
 
 <div class="audio-meta">
 
@@ -1071,7 +1785,7 @@ src="Пока мир горит.mp3">
 <img
 class="audio-cover"
 src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
-alt="Tra inferno E paradiso">
+alt="Nouvel Ordre">
 
 <div class="audio-meta">
 
@@ -1093,15 +1807,106 @@ src="Tra inferno E paradiso - Krovina vorona - SoundLoadMate.com.mp3">
 
 </div>
 
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     UPCOMING PROJECT — ENTRE LES MONDES
+======================================================= -->
+
+<section
+id="upcoming"
+class="fade upcoming">
+
+<div class="section-head">
+
+<div class="kicker">
+NEXT PROJECT
+</div>
+
+<h2
+class="section-title">
+МЕЖДУ МИРАМИ
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div>
+
+<div class="upcoming-label"
+data-key="upcoming-label">
+PROCHAIN PROJET
+</div>
+
+
+<div class="upcoming-cover-wrap">
+
+<img
+class="upcoming-cover"
+src="5c4b0b54-0854-49c5-82d2-2719382a1924.png"
+alt="Entre les mondes — Krovina Vorona">
+
+</div>
+
+
+<h2 class="upcoming-title">
+Entre les mondes
+</h2>
+
+<div class="upcoming-russian">
+МЕЖДУ МИРАМИ
+</div>
+
+
+<p
+class="upcoming-text"
+data-key="upcoming-text">
+
+Après Nouvel Ordre, Krovina Vorona ouvre
+un nouveau chapitre avec Entre les mondes.
+
+Un projet plus lumineux, mystique et
+cinématographique, situé entre le rêve
+et la réalité, l'amour et la solitude,
+les étoiles et le chemin intérieur.
+
+</p>
 
 </div>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- =======================================================
+     QUOTE
+======================================================= -->
 
-<section id="gallery" class="fade">
+<section
+class="quote-section fade">
+
+<div
+class="quote"
+data-key="quote">
+
+« La musique est un passage entre les mondes. »
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     GALERIE
+======================================================= -->
+
+<section
+id="gallery"
+class="fade">
 
 <div class="section-head">
 
@@ -1124,76 +1929,87 @@ GALERIE
 
 
 <div class="gallery-item">
+
 <img
 src="D370F822-448B-4EEF-BA6E-5E0FC411D803.png"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
+
 <img
 src="2746AA04-050E-4540-9AAF-927723048A2B.png"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
+
 <img
 src="IMG_5520.png"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
+
 <img
 src="7803CACA-7B01-46BB-9F39-74FB6C15057B.png"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
+
 <img
 src="19D52A46-5D89-46CF-9A56-74F76EC32A88.png"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
-<img
-src="2E1239D0-E810-4D10-B512-CA4EA508A5B4.png"
-alt="Krovina Vorona">
-</div>
 
-
-<div class="gallery-item">
 <img
 src="IMG_5511.jpeg"
 alt="Krovina Vorona">
+
 </div>
 
 
 <div class="gallery-item">
+
 <img
 src="IMG_5512.jpeg"
 alt="Krovina Vorona">
+
 </div>
 
 
-<!-- NOUVELLE IMAGE AJOUTÉE -->
+<!-- NOUVELLE COVER ENTRE LES MONDES -->
 
 <div class="gallery-item">
-<img
-src="ChatGPT Image 5 août 2026, 14_59_24.png"
-alt="Krovina Vorona — nouvelle photographie">
-</div>
 
-
-<!-- AUTRE IMAGE AJOUTÉE -->
-
-<div class="gallery-item">
 <img
 src="5c4b0b54-0854-49c5-82d2-2719382a1924.png"
+alt="Entre les mondes">
+
+</div>
+
+
+<!-- PHOTO AJOUTÉE -->
+
+<div class="gallery-item">
+
+<img
+src="ChatGPT Image 5 août 2026, 14_59_24.png"
 alt="Krovina Vorona">
+
 </div>
 
 
@@ -1202,9 +2018,13 @@ alt="Krovina Vorona">
 </section>
 
 
-<!-- SOCIALS -->
+<!-- =======================================================
+     SOCIALS
+======================================================= -->
 
-<section id="socials" class="fade">
+<section
+id="socials"
+class="fade">
 
 <div class="section-head">
 
@@ -1228,7 +2048,7 @@ RÉSEAUX
 <a
 href="https://www.instagram.com/krovina.vorona"
 target="_blank"
-rel="noopener">
+rel="noopener noreferrer">
 Instagram
 </a>
 
@@ -1236,7 +2056,7 @@ Instagram
 <a
 href="https://www.tiktok.com/@krovina495"
 target="_blank"
-rel="noopener">
+rel="noopener noreferrer">
 TikTok
 </a>
 
@@ -1245,9 +2065,13 @@ TikTok
 </section>
 
 
-<!-- CONTACT -->
+<!-- =======================================================
+     CONTACT
+======================================================= -->
 
-<section id="contact" class="fade">
+<section
+id="contact"
+class="fade">
 
 <div class="section-head">
 
@@ -1269,12 +2093,16 @@ CONTACT
 <div class="card contact">
 
 <p data-key="contact-text">
-Pour collaborations, booking, presse ou projets artistiques :
+
+Pour collaborations, booking, presse
+ou projets artistiques :
+
 </p>
 
 <br>
 
-<a href="mailto:krovina.vorona495@outlook.com">
+<a
+href="mailto:krovina.vorona495@outlook.com">
 krovina.vorona495@outlook.com
 </a>
 
@@ -1283,7 +2111,9 @@ krovina.vorona495@outlook.com
 </section>
 
 
-<!-- FOOTER -->
+<!-- =======================================================
+     FOOTER
+======================================================= -->
 
 <footer>
 
@@ -1310,48 +2140,72 @@ Moscow • Tbilisi • Saint Petersburg
 </footer>
 
 
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
 
-/* =========================
+/* =========================================================
    TRANSLATIONS
-========================= */
+========================================================= */
 
 const translations = {
 
 fr:{
 
 "nav-bio":"Bio",
-"nav-ep":"EP",
+"nav-current":"Projet actuel",
 "nav-listen":"Écouter",
+"nav-upcoming":"Prochain projet",
 "nav-gallery":"Galerie",
 "nav-socials":"Réseaux",
 "nav-contact":"Contact",
 
-"hero-sub":"Artiste indépendante • Ghostwriter • Parolière",
+"hero-sub":
+"Artiste indépendante • Ghostwriter • Parolière",
 
-"hero-quote":"« Entre le passé et le nouveau monde. »",
+"hero-quote":
+"« Entre l'ombre et la lumière. »",
 
-"hero-btn":"Écouter",
+"hero-current":
+"Projet actuel",
 
-"hero-btn2":"Entre les mondes",
+"hero-upcoming":
+"Entre les mondes",
 
-"title-bio":"BIOGRAPHIE",
+"title-bio":
+"BIOGRAPHIE",
 
-"title-listen":"ÉCOUTER",
+"title-listen":
+"ÉCOUTER",
 
-"title-gallery":"GALERIE",
+"title-gallery":
+"GALERIE",
 
-"title-socials":"RÉSEAUX",
+"title-socials":
+"RÉSEAUX",
 
-"title-contact":"CONTACT",
+"title-contact":
+"CONTACT",
 
-"ep-description":
-"Un univers situé entre le rêve et la réalité, l'amour et la solitude, l'ombre et la lumière. Une exploration mystique et personnelle de Krovina Vorona.",
+"current-badge":
+"Projet actuel",
 
-"ep-listen":"Écouter les morceaux",
+"current-description":
+"Le projet actuel de Krovina Vorona. Un univers mystique et sombre où se rencontrent spiritualité, amour, société, occultisme, symbolisme et recherche de vérité.",
+
+"current-description-2":
+"La musique traverse plusieurs langues et plusieurs univers pour construire une identité entre rap, rock, électronique et atmosphères cinématographiques.",
+
+"upcoming-label":
+"PROCHAIN PROJET",
+
+"upcoming-text":
+"Après Nouvel Ordre, Krovina Vorona ouvre un nouveau chapitre avec Entre les mondes. Un projet plus lumineux, mystique et cinématographique, situé entre le rêve et la réalité, l'amour et la solitude, les étoiles et le chemin intérieur.",
 
 "quote":
-"« La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »",
+"« La musique est un passage entre les mondes. »",
 
 "contact-text":
 "Pour collaborations, booking, presse ou projets artistiques :",
@@ -1359,41 +2213,43 @@ fr:{
 "bio-html":`
 
 <p>
-<strong>Nom complet :</strong>
-Krovina Maria Vorona Avalishvili
-<br>
 <strong>Nom de scène :</strong>
 Krovina Vorona
 </p>
 
-<h3>── Les Racines ──</h3>
+<h3>
+── Les Racines ──
+</h3>
 
 <p>
 L'univers de Krovina Vorona est nourri par
 des racines russes, françaises et géorgiennes,
-ainsi que par une forte fascination pour les
-mondes symboliques, la spiritualité et les
-contrastes humains.
+ainsi que par une fascination profonde pour
+les mondes symboliques, la spiritualité et
+les contrastes humains.
 </p>
 
-<h3>── Le Parcours ──</h3>
+<h3>
+── Le Parcours ──
+</h3>
 
 <p>
-Artiste indépendante et pluridisciplinaire,
-elle développe une identité musicale et
-visuelle pensée comme un voyage cinématographique,
+Artiste pluridisciplinaire, Krovina Vorona
+développe une identité musicale et visuelle
+pensée comme un voyage cinématographique,
 entre musique, image, récit et mise en scène.
 </p>
 
-<h3>── L'Univers Artistique ──</h3>
+<h3>
+── L'Univers Artistique ──
+</h3>
 
 <p>
 Sa musique explore l'amour impossible,
 les rêves, l'astral, l'obscurité de la société,
-l'enfer et le paradis.
-Son esthétique mélange mysticisme,
-cultures de l'Est, électronique, rap,
-rock et atmosphères cinématographiques.
+l'enfer et le paradis. Son esthétique mélange
+mysticisme, cultures de l'Est, électronique,
+rap, rock et atmosphères cinématographiques.
 </p>
 
 `
@@ -1404,8 +2260,9 @@ rock et atmosphères cinématographiques.
 en:{
 
 "nav-bio":"Bio",
-"nav-ep":"EP",
+"nav-current":"Current project",
 "nav-listen":"Listen",
+"nav-upcoming":"Next project",
 "nav-gallery":"Gallery",
 "nav-socials":"Socials",
 "nav-contact":"Contact",
@@ -1414,30 +2271,46 @@ en:{
 "Independent Artist • Ghostwriter • Songwriter",
 
 "hero-quote":
-"“Between the past and the new world.”",
+"“Between shadow and light.”",
 
-"hero-btn":"Listen",
+"hero-current":
+"Current project",
 
-"hero-btn2":"Between the worlds",
+"hero-upcoming":
+"Between the worlds",
 
-"title-bio":"BIOGRAPHY",
+"title-bio":
+"BIOGRAPHY",
 
-"title-listen":"LISTEN",
+"title-listen":
+"LISTEN",
 
-"title-gallery":"GALLERY",
+"title-gallery":
+"GALLERY",
 
-"title-socials":"SOCIALS",
+"title-socials":
+"SOCIALS",
 
-"title-contact":"CONTACT",
+"title-contact":
+"CONTACT",
 
-"ep-description":
-"A universe between dream and reality, love and solitude, shadow and light. A mystical and personal exploration by Krovina Vorona.",
+"current-badge":
+"Current project",
 
-"ep-listen":
-"Listen to the tracks",
+"current-description":
+"Krovina Vorona's current project. A dark and mystical universe where spirituality, love, society, occultism, symbolism and the search for truth meet.",
+
+"current-description-2":
+"The music moves across languages and worlds, creating an identity between rap, rock, electronic music and cinematic atmospheres.",
+
+"upcoming-label":
+"NEXT PROJECT",
+
+"upcoming-text":
+"After New Order, Krovina Vorona opens a new chapter with Between the Worlds. A brighter, mystical and cinematic project situated between dream and reality, love and solitude, the stars and the inner journey.",
 
 "quote":
-"“Music is a universal language capable of bringing human beings together despite their differences.”",
+"“Music is a passage between worlds.”",
 
 "contact-text":
 "For collaborations, booking, press or artistic projects:",
@@ -1449,31 +2322,38 @@ en:{
 Krovina Vorona
 </p>
 
-<h3>── Roots ──</h3>
+<h3>
+── Roots ──
+</h3>
 
 <p>
 Krovina Vorona's universe is shaped by
-Russian, French and Georgian roots,
-spirituality and a fascination with
-symbolic worlds.
+Russian, French and Georgian roots, together
+with a deep fascination for symbolic worlds,
+spirituality and human contrasts.
 </p>
 
-<h3>── Journey ──</h3>
+<h3>
+── Journey ──
+</h3>
 
 <p>
-An independent multidisciplinary artist
-building a cinematic identity through
-music, image, storytelling and visual direction.
+As a multidisciplinary artist, Krovina Vorona
+develops a musical and visual identity designed
+as a cinematic journey between music, image,
+storytelling and performance.
 </p>
 
-<h3>── Artistic Universe ──</h3>
+<h3>
+── Artistic Universe ──
+</h3>
 
 <p>
-Her music explores impossible love,
-dreams, the astral, social darkness,
-hell and paradise through mystical,
-electronic, rap, rock and cinematic
-atmospheres.
+Her music explores impossible love, dreams,
+the astral, the darkness of society, hell
+and paradise. Her aesthetic combines mysticism,
+Eastern cultures, electronic music, rap, rock
+and cinematic atmospheres.
 </p>
 
 `
@@ -1483,78 +2363,102 @@ atmospheres.
 
 ru:{
 
-"nav-bio":"Био",
-"nav-ep":"EP",
+"nav-bio":"Биография",
+"nav-current":"Текущий проект",
 "nav-listen":"Слушать",
+"nav-upcoming":"Следующий проект",
 "nav-gallery":"Галерея",
 "nav-socials":"Соцсети",
 "nav-contact":"Контакты",
 
 "hero-sub":
-"Независимый артист • Гострайтер • Автор песен",
+"Независимая артистка • Гострайтер • Автор песен",
 
 "hero-quote":
-"«Между прошлым и новым миром».",
+"«Между тьмой и светом.»",
 
-"hero-btn":"Слушать",
+"hero-current":
+"Текущий проект",
 
-"hero-btn2":"Между мирами",
+"hero-upcoming":
+"Между мирами",
 
-"title-bio":"БИОГРАФИЯ",
+"title-bio":
+"БИОГРАФИЯ",
 
-"title-listen":"СЛУШАТЬ",
+"title-listen":
+"СЛУШАТЬ",
 
-"title-gallery":"ГАЛЕРЕЯ",
+"title-gallery":
+"ГАЛЕРЕЯ",
 
-"title-socials":"СОЦСЕТИ",
+"title-socials":
+"СОЦСЕТИ",
 
-"title-contact":"КОНТАКТЫ",
+"title-contact":
+"КОНТАКТЫ",
 
-"ep-description":
-"Вселенная между сном и реальностью, любовью и одиночеством, тьмой и светом. Мистическое и личное путешествие Krovina Vorona.",
+"current-badge":
+"Текущий проект",
 
-"ep-listen":
-"Слушать треки",
+"current-description":
+"Текущий проект Кровины Вороны. Мистический и тёмный мир, где встречаются духовность, любовь, общество, оккультизм, символизм и поиск истины.",
+
+"current-description-2":
+"Музыка проходит через разные языки и миры, соединяя рэп, рок, электронику и кинематографическую атмосферу.",
+
+"upcoming-label":
+"СЛЕДУЮЩИЙ ПРОЕКТ",
+
+"upcoming-text":
+"После «Нового порядка» Кровина Ворона открывает новую главу — «Между мирами». Более светлый, мистический и кинематографический проект между сном и реальностью, любовью и одиночеством, звёздами и внутренним путём.",
 
 "quote":
-"«Музыка — универсальный язык, способный объединять людей несмотря на различия».",
+"«Музыка — это проход между мирами.»",
 
 "contact-text":
-"Для сотрудничества, букинга, прессы или художественных проектов:",
+"Для сотрудничества, букинга, прессы и творческих проектов:",
 
 "bio-html":`
 
 <p>
 <strong>Сценическое имя:</strong>
-Krovina Vorona
+Кровина Ворона
 </p>
 
-<h3>── Корни ──</h3>
+<h3>
+── Корни ──
+</h3>
 
 <p>
-Музыка Krovina Vorona вдохновлена
+Вселенная Кровины Вороны сформирована
 русскими, французскими и грузинскими
-корнями, духовностью и символическими
-мирами.
+корнями, а также глубоким интересом
+к символическим мирам, духовности
+и человеческим контрастам.
 </p>
 
-<h3>── Путь ──</h3>
+<h3>
+── Путь ──
+</h3>
 
 <p>
-Независимый мультидисциплинарный артист,
-создающий музыку и визуальный мир
-как кинематографическое путешествие.
+Как мультидисциплинарная артистка,
+Кровина Ворона создаёт музыкальную
+и визуальную идентичность как
+кинематографическое путешествие.
 </p>
 
-<h3>── Художественная вселенная ──</h3>
+<h3>
+── Артистический мир ──
+</h3>
 
 <p>
-Творчество исследует невозможную любовь,
+Её музыка исследует невозможную любовь,
 сны, астрал, тёмную сторону общества,
-ад и рай.
-Музыка соединяет мистику,
-электронику, рэп, рок и кинематографическую
-атмосферу.
+ад и рай. Эстетика соединяет мистицизм,
+восточные культуры, электронику, рэп,
+рок и кинематографическую атмосферу.
 </p>
 
 `
@@ -1565,22 +2469,23 @@ Krovina Vorona
 ka:{
 
 "nav-bio":"ბიო",
-"nav-ep":"EP",
+"nav-current":"მიმდინარე პროექტი",
 "nav-listen":"მოსმენა",
+"nav-upcoming":"შემდეგი პროექტი",
 "nav-gallery":"გალერეა",
-"nav-socials":"სოც. ქსელები",
+"nav-socials":"სოციალური ქსელები",
 "nav-contact":"კონტაქტი",
 
 "hero-sub":
-"დამოუკიდებელი არტისტი • გოსთრაიტერი • სიმღერების ავტორი",
+"დამოუკიდებელი არტისტი • გოსთრაითერი • სიმღერების ავტორი",
 
 "hero-quote":
-"„წარსულსა და ახალ სამყაროს შორის.“",
+"„სიბნელესა და სინათლეს შორის.“",
 
-"hero-btn":
-"მოსმენა",
+"hero-current":
+"მიმდინარე პროექტი",
 
-"hero-btn2":
+"hero-upcoming":
 "სამყაროებს შორის",
 
 "title-bio":
@@ -1593,54 +2498,71 @@ ka:{
 "გალერეა",
 
 "title-socials":
-"სოც. ქსელები",
+"სოციალური ქსელები",
 
 "title-contact":
 "კონტაქტი",
 
-"ep-description":
-"სამყარო ოცნებასა და რეალობას, სიყვარულსა და მარტოობას, სიბნელესა და სინათლეს შორის. Krovina Vorona-ს პირადი და მისტიკური მოგზაურობა.",
+"current-badge":
+"მიმდინარე პროექტი",
 
-"ep-listen":
-"ტრეკების მოსმენა",
+"current-description":
+"კროვინა ვორონას მიმდინარე პროექტი. მისტიკური და ბნელი სამყარო, სადაც ერთმანეთს ხვდება სულიერება, სიყვარული, საზოგადოება, ოკულტიზმი, სიმბოლიზმი და ჭეშმარიტების ძიება.",
+
+"current-description-2":
+"მუსიკა სხვადასხვა ენასა და სამყაროს აერთიანებს და ქმნის იდენტობას რეპის, როკის, ელექტრონული მუსიკისა და კინემატოგრაფიული ატმოსფეროების შორის.",
+
+"upcoming-label":
+"შემდეგი პროექტი",
+
+"upcoming-text":
+"„ახალი წესრიგის“ შემდეგ კროვინა ვორონა ახალ თავს ხსნის პროექტით „სამყაროებს შორის“. უფრო ნათელი, მისტიკური და კინემატოგრაფიული პროექტი სიზმარსა და რეალობას, სიყვარულსა და მარტოობას, ვარსკვლავებსა და შინაგან გზას შორის.",
 
 "quote":
-"„მუსიკა უნივერსალური ენაა, რომელსაც ადამიანების გაერთიანება შეუძლია.“",
+"„მუსიკა არის გადასასვლელი სამყაროებს შორის.“",
 
 "contact-text":
-"თანამშრომლობისთვის, ბუქინგისთვის, პრესისთვის ან არტისტული პროექტებისთვის:",
+"თანამშრომლობისთვის, ბუქინგისთვის, პრესისა და შემოქმედებითი პროექტებისთვის:",
 
 "bio-html":`
 
 <p>
 <strong>სასცენო სახელი:</strong>
-Krovina Vorona
+კროვინა ვორონა
 </p>
 
-<h3>── ფესვები ──</h3>
+<h3>
+── ფესვები ──
+</h3>
 
 <p>
-მისი სამყარო შთაგონებულია რუსული,
-ფრანგული და ქართული ფესვებით,
-სულიერებითა და სიმბოლური სამყაროების
-ძიებით.
+კროვინა ვორონას სამყარო შთაგონებულია
+რუსული, ფრანგული და ქართული ფესვებით,
+ასევე სიმბოლური სამყაროების,
+სულიერებისა და ადამიანური
+კონტრასტების მიმართ ინტერესით.
 </p>
 
-<h3>── გზა ──</h3>
+<h3>
+── გზა ──
+</h3>
 
 <p>
-დამოუკიდებელი მულტიდისციპლინური არტისტი,
-რომელიც მუსიკასა და ვიზუალურ სამყაროს
-კინემატოგრაფიულ მოგზაურობად ქმნის.
+როგორც მულტიდისციპლინარული არტისტი,
+კროვინა ვორონა ქმნის მუსიკალურ და
+ვიზუალურ იდენტობას კინემატოგრაფიული
+მოგზაურობის მსგავსად.
 </p>
 
-<h3>── არტისტული სამყარო ──</h3>
+<h3>
+── არტისტული სამყარო ──
+</h3>
 
 <p>
-შემოქმედება იკვლევს შეუძლებელ სიყვარულს,
+მისი მუსიკა იკვლევს შეუძლებელ სიყვარულს,
 სიზმრებს, ასტრალს, საზოგადოების სიბნელეს,
-ჯოჯოხეთსა და სამოთხეს.
-მისი მუსიკა აერთიანებს მისტიკას,
+ჯოჯოხეთსა და სამოთხეს. ესთეტიკა აერთიანებს
+მისტიციზმს, აღმოსავლურ კულტურებს,
 ელექტრონულ მუსიკას, რეპს, როკს და
 კინემატოგრაფიულ ატმოსფეროებს.
 </p>
@@ -1652,9 +2574,9 @@ Krovina Vorona
 };
 
 
-/* =========================
-   LANGUAGE SWITCHER
-========================= */
+/* =========================================================
+   LANGUAGE
+========================================================= */
 
 function changeLanguage(lang){
 
@@ -1662,160 +2584,140 @@ function changeLanguage(lang){
 
     if(!data) return;
 
-    document.documentElement.lang = lang;
 
     document
         .querySelectorAll("[data-key]")
-        .forEach(el => {
+        .forEach(element => {
 
-            const key = el.dataset.key;
+            const key =
+                element.getAttribute("data-key");
 
             if(data[key]){
-                el.textContent = data[key];
+                element.innerHTML =
+                    data[key];
             }
 
         });
 
-    const bio = document.getElementById("bio-content");
+
+    const bio =
+        document.getElementById("bio-content");
 
     if(bio && data["bio-html"]){
-        bio.innerHTML = data["bio-html"];
+        bio.innerHTML =
+            data["bio-html"];
     }
 
-    localStorage.setItem("krovinaLanguage",lang);
+
+    document.documentElement.lang =
+        lang;
+
+    localStorage.setItem(
+        "krovina-language",
+        lang
+    );
+
 }
 
 
-/* =========================
-   LOAD LANGUAGE
-========================= */
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
 
 const savedLanguage =
-    localStorage.getItem("krovinaLanguage") || "fr";
+    localStorage.getItem(
+        "krovina-language"
+    );
 
-document.querySelector(".lang-selector").value =
-    savedLanguage;
+if(savedLanguage){
 
-changeLanguage(savedLanguage);
+    const selector =
+        document.querySelector(
+            ".lang-selector"
+        );
 
-
-/* =========================
-   SCROLL ANIMATIONS
-========================= */
-
-const observer =
-new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("show");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold:.08
+    if(selector){
+        selector.value =
+            savedLanguage;
     }
 
-);
+    changeLanguage(
+        savedLanguage
+    );
+
+}else{
+
+    changeLanguage("fr");
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if(entry.isIntersecting){
+
+                        entry.target
+                            .classList
+                            .add("show");
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
 
 document
     .querySelectorAll(".fade")
-    .forEach(element => {
+    .forEach(
+        element =>
+            observer.observe(element)
+    );
 
-        observer.observe(element);
 
-    });
-
-
-/* =========================
-   AUDIO PLAYER SYSTEM
-   One track at a time
-========================= */
+/* =========================================================
+   STOP OTHER AUDIO PLAYERS
+========================================================= */
 
 const players =
-document.querySelectorAll("audio");
+    document.querySelectorAll("audio");
 
 players.forEach(player => {
 
-    player.addEventListener("play", () => {
+    player.addEventListener(
+        "play",
+        () => {
 
-        players.forEach(other => {
+            players.forEach(
+                other => {
 
-            if(other !== player){
+                    if(other !== player){
+                        other.pause();
+                    }
 
-                other.pause();
-
-                const card =
-                    other.closest(".audio-card");
-
-                if(card){
-                    card.classList.remove("playing");
                 }
+            );
 
-            }
-
-        });
-
-        const currentCard =
-            player.closest(".audio-card");
-
-        if(currentCard){
-            currentCard.classList.add("playing");
         }
-
-    });
-
-    player.addEventListener("pause", () => {
-
-        const card =
-            player.closest(".audio-card");
-
-        if(card && player.ended){
-            card.classList.remove("playing");
-        }
-
-    });
-
-    player.addEventListener("ended", () => {
-
-        const card =
-            player.closest(".audio-card");
-
-        if(card){
-            card.classList.remove("playing");
-        }
-
-    });
+    );
 
 });
-
-
-/* =========================
-   IMAGE FALLBACK
-========================= */
-
-document
-    .querySelectorAll("img")
-    .forEach(img => {
-
-        img.addEventListener("error", () => {
-
-            img.style.opacity = "0.25";
-
-        });
-
-    });
 
 </script>
 
 </body>
 </html>
-```
