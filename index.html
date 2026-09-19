@@ -1,0 +1,2812 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krovina Vorona | Official Website</title>
+
+<meta
+  name="description"
+  content="Krovina Vorona — Krovina Maria Vorona Avalishvili. Artiste indépendante, parolière et ghostwriter."
+>
+
+<meta property="og:title" content="Krovina Vorona | Official">
+<meta
+  property="og:description"
+  content="Krovina Vorona — artiste indépendante, parolière et ghostwriter. Nouveau projet : Entre les mondes."
+>
+<meta
+  property="og:image"
+  content="5c4b0b54-0854-49c5-82d2-2719382a1924.png"
+>
+
+<link rel="icon" href="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root{
+  --bg:#02030a;
+  --bg2:#070b1c;
+  --blue:#718cff;
+  --violet:#a06cff;
+  --cyan:#82cfff;
+  --white:#f5f6ff;
+  --muted:#aab1ca;
+  --soft:#cbd1e5;
+  --line:rgba(255,255,255,.13);
+  --card:rgba(7,10,27,.78);
+  --green:#879f78;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior:smooth;
+}
+
+html{
+  background:var(--bg);
+}
+
+body{
+  color:var(--white);
+  font-family:Inter,sans-serif;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(62,91,190,.20),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 55%,
+      rgba(128,70,190,.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #02030a 0%,
+      #050817 48%,
+      #02030a 100%
+    );
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.48;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.8) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle,
+      rgba(140,160,255,.55) 0 1px,
+      transparent 1.5px
+    );
+
+  background-size:
+    180px 180px,
+    310px 310px;
+
+  background-position:
+    20px 30px,
+    90px 120px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:72px;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(2,3,10,.78);
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid var(--line);
+}
+
+nav ul{
+  display:flex;
+  gap:28px;
+  list-style:none;
+  align-items:center;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:.72rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.82;
+  transition:.3s;
+}
+
+nav a:hover{
+  opacity:1;
+  text-shadow:
+    0 0 18px rgba(130,150,255,.85);
+}
+
+.lang-selector{
+  position:absolute;
+  right:22px;
+
+  background:rgba(255,255,255,.04);
+  color:white;
+
+  border:1px solid var(--line);
+
+  padding:8px 10px;
+
+  font:
+    600 .7rem Inter,
+    sans-serif;
+
+  cursor:pointer;
+}
+
+.lang-selector option{
+  background:#050509;
+  color:white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  padding:
+    110px 20px
+    80px;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      rgba(2,3,10,.42),
+      rgba(2,3,10,.86)
+    ),
+    url("19D52A46-5D89-46CF-9A56-74F76EC32A88.png")
+    center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 15%,
+      rgba(2,3,10,.25) 50%,
+      rgba(2,3,10,.92) 100%
+    );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1000px;
+}
+
+.logo{
+  width:125px;
+  height:125px;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 0 25px
+      rgba(120,145,255,.58)
+    );
+
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font:
+    500 clamp(2.5rem,7vw,6.2rem)
+    Cinzel,
+    serif;
+
+  letter-spacing:9px;
+
+  text-shadow:
+    0 0 35px
+    rgba(110,130,255,.35);
+}
+
+.hero h2{
+  margin-top:16px;
+
+  font-size:.8rem;
+  letter-spacing:7px;
+
+  color:#c7cce0;
+  font-weight:300;
+}
+
+.hero-sub{
+  margin-top:28px;
+
+  font-size:.78rem;
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:#d1d6e8;
+}
+
+.hero-quote{
+  margin-top:18px;
+
+  font:
+    italic 1.05rem Cinzel,
+    serif;
+
+  color:#aab5d6;
+}
+
+.buttons{
+  display:flex;
+  gap:14px;
+
+  justify-content:center;
+  flex-wrap:wrap;
+
+  margin-top:34px;
+}
+
+.btn{
+  display:inline-flex;
+
+  padding:13px 24px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.35);
+
+  color:white;
+
+  text-decoration:none;
+
+  letter-spacing:2px;
+  font-size:.72rem;
+
+  text-transform:uppercase;
+
+  background:
+    rgba(255,255,255,.035);
+
+  transition:.3s;
+
+  backdrop-filter:blur(8px);
+}
+
+.btn:hover{
+  background:white;
+  color:#03040a;
+
+  box-shadow:
+    0 0 30px
+    rgba(120,140,255,.35);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+  max-width:1200px;
+  margin:auto;
+
+  padding:
+    110px 22px;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.kicker{
+  font-size:.62rem;
+  letter-spacing:5px;
+  text-transform:uppercase;
+
+  color:#7180ad;
+
+  margin-bottom:12px;
+}
+
+.section-title{
+  font:
+    500 clamp(1.9rem,5vw,3rem)
+    Cinzel,
+    serif;
+
+  letter-spacing:4px;
+}
+
+.line{
+  width:70px;
+  height:1px;
+
+  background:
+    rgba(150,170,255,.6);
+
+  margin:
+    20px auto 0;
+
+  box-shadow:
+    0 0 18px
+    rgba(100,130,255,.5);
+}
+
+/* =========================
+   BIO
+========================= */
+
+.bio-grid{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:55px;
+
+  align-items:center;
+}
+
+.bio-image img{
+  width:100%;
+  display:block;
+
+  max-height:760px;
+
+  object-fit:cover;
+
+  border:
+    1px solid
+    var(--line);
+
+  box-shadow:
+    0 25px 70px
+    rgba(0,0,0,.55);
+}
+
+.card{
+  background:var(--card);
+
+  border:
+    1px solid
+    var(--line);
+
+  padding:34px;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0,0,0,.35);
+
+  backdrop-filter:blur(15px);
+}
+
+.bio-text{
+  color:#c8cee0;
+
+  line-height:1.82;
+
+  font-size:.94rem;
+}
+
+.bio-text strong{
+  color:white;
+}
+
+.bio-text p{
+  margin-bottom:18px;
+}
+
+.bio-text h3{
+  font:
+    500 1rem Cinzel,
+    serif;
+
+  letter-spacing:2px;
+
+  color:white;
+
+  margin:
+    30px 0 11px;
+}
+
+/* =========================
+   CURRENT PROJECT
+========================= */
+
+.current-project{
+  position:relative;
+}
+
+.current-project::before{
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  left:-300px;
+  top:150px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(75,125,85,.12),
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+.project-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(300px,480px)
+    1fr;
+
+  gap:65px;
+
+  align-items:center;
+}
+
+.cover{
+  width:100%;
+
+  display:block;
+
+  border:
+    1px solid
+    var(--line);
+
+  box-shadow:
+    0 30px 80px
+    rgba(0,0,0,.65);
+
+  transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+}
+
+.cover:hover{
+  transform:translateY(-7px);
+
+  box-shadow:
+    0 35px 90px
+    rgba(0,0,0,.75);
+}
+
+.project-copy h3{
+  font:
+    500 clamp(1.8rem,4vw,2.8rem)
+    Cinzel,
+    serif;
+
+  letter-spacing:4px;
+
+  margin-bottom:10px;
+}
+
+.project-russian{
+  color:#aab4ce;
+
+  font:
+    500 1.25rem Cinzel,
+    serif;
+
+  letter-spacing:3px;
+
+  margin-bottom:22px;
+}
+
+.project-status{
+  display:inline-block;
+
+  padding:
+    7px 13px;
+
+  margin-bottom:24px;
+
+  border:
+    1px solid
+    rgba(150,170,255,.3);
+
+  color:#b9c4e4;
+
+  font-size:.62rem;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+}
+
+.project-copy p{
+  color:var(--muted);
+
+  line-height:1.85;
+
+  margin-bottom:18px;
+}
+
+.tracklist{
+  margin-top:28px;
+
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.track{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:
+    16px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.track-number{
+  color:#68749b;
+
+  font-size:.68rem;
+
+  letter-spacing:2px;
+
+  min-width:35px;
+}
+
+.track-name{
+  flex:1;
+
+  color:#e5e8f4;
+
+  font:
+    500 .9rem Cinzel,
+    serif;
+
+  letter-spacing:1px;
+}
+
+.track-language{
+  color:#68749b;
+
+  font-size:.6rem;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+/* =========================
+   NEXT PROJECT
+========================= */
+
+.next-project{
+  max-width:1300px;
+}
+
+.next-project-intro{
+  max-width:850px;
+
+  margin:
+    0 auto 50px;
+
+  text-align:center;
+}
+
+.next-project-intro p{
+  color:var(--muted);
+
+  line-height:1.9;
+
+  font-size:.95rem;
+}
+
+.next-project-card{
+  position:relative;
+
+  overflow:hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.16);
+
+  background:#03040b;
+
+  box-shadow:
+    0 40px 110px
+    rgba(0,0,0,.65);
+}
+
+.next-project-card img{
+  width:100%;
+
+  display:block;
+
+  max-height:820px;
+
+  object-fit:cover;
+
+  transition:
+    transform 1.2s ease;
+}
+
+.next-project-card:hover img{
+  transform:scale(1.025);
+}
+
+.next-overlay{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:60px 25px;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(2,3,10,.25) 50%,
+      rgba(2,3,10,.94) 100%
+    );
+}
+
+.next-content{
+  max-width:850px;
+}
+
+.next-label{
+  font-size:.65rem;
+
+  letter-spacing:6px;
+
+  color:#bbc5e8;
+
+  text-transform:uppercase;
+
+  margin-bottom:15px;
+}
+
+.next-title{
+  font:
+    500 clamp(2.2rem,6vw,5rem)
+    Cinzel,
+    serif;
+
+  letter-spacing:7px;
+
+  text-shadow:
+    0 0 35px
+    rgba(100,140,255,.45);
+}
+
+.next-subtitle{
+  margin-top:12px;
+
+  font:
+    1rem Cinzel,
+    serif;
+
+  color:#c9d0e5;
+
+  letter-spacing:4px;
+}
+
+.next-description{
+  margin-top:18px;
+
+  color:#c2c9dc;
+
+  line-height:1.75;
+
+  font-size:.9rem;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section{
+  max-width:1000px;
+}
+
+.quote{
+  text-align:center;
+
+  max-width:850px;
+
+  margin:auto;
+
+  color:#b8bfd5;
+
+  font:
+    italic clamp(1.1rem,2vw,1.45rem)
+    Cinzel,
+    serif;
+
+  line-height:1.7;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+.audio-list{
+  display:grid;
+  gap:18px;
+}
+
+.audio-card{
+  display:grid;
+
+  grid-template-columns:
+    82px 1fr;
+
+  gap:20px;
+
+  align-items:center;
+
+  padding:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(25,32,70,.55),
+      rgba(5,7,20,.82)
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.35);
+
+  transition:.3s;
+}
+
+.audio-card:hover{
+  border-color:
+    rgba(130,150,255,.35);
+
+  transform:
+    translateY(-2px);
+}
+
+.audio-cover{
+  width:82px;
+  height:82px;
+
+  object-fit:cover;
+
+  border:
+    1px solid
+    var(--line);
+}
+
+.audio-meta .label{
+  font-size:.58rem;
+
+  letter-spacing:3px;
+
+  color:#7480a4;
+
+  text-transform:uppercase;
+
+  margin-bottom:7px;
+}
+
+.audio-title{
+  font:
+    500 1rem Cinzel,
+    serif;
+
+  letter-spacing:1px;
+
+  margin-bottom:12px;
+}
+
+audio{
+  width:100%;
+  height:40px;
+
+  filter:
+    invert(1)
+    opacity(.9);
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(230px,1fr)
+    );
+
+  gap:18px;
+}
+
+.gallery-item{
+  overflow:hidden;
+
+  aspect-ratio:4/5;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:#050711;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:
+    transform .7s ease,
+    filter .7s ease;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+
+  filter:
+    brightness(1.08)
+    contrast(1.03);
+}
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:16px;
+}
+
+.socials a{
+  min-width:170px;
+
+  padding:
+    17px 25px;
+
+  text-align:center;
+
+  color:white;
+
+  text-decoration:none;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(255,255,255,.035);
+
+  font-size:.7rem;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  transition:.3s;
+}
+
+.socials a:hover{
+  background:white;
+  color:#03040a;
+
+  box-shadow:
+    0 0 30px
+    rgba(120,140,255,.25);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  max-width:700px;
+
+  margin:auto;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  line-height:1.8;
+}
+
+.contact a{
+  color:white;
+
+  text-decoration:none;
+
+  font:
+    500 1rem Cinzel,
+    serif;
+
+  letter-spacing:1px;
+
+  word-break:break-word;
+}
+
+.contact a:hover{
+  text-shadow:
+    0 0 18px
+    rgba(130,150,255,.8);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:
+    75px 20px;
+
+  text-align:center;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(0,0,0,.25);
+}
+
+footer h2{
+  font:
+    500 1.7rem Cinzel,
+    serif;
+
+  letter-spacing:5px;
+
+  margin-bottom:15px;
+}
+
+footer div{
+  color:#78819c;
+
+  font-size:.65rem;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade{
+  opacity:0;
+
+  transform:
+    translateY(25px);
+
+  transition:
+    opacity .9s ease,
+    transform .9s ease;
+}
+
+.fade.show{
+  opacity:1;
+
+  transform:
+    translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  nav{
+    height:auto;
+    min-height:64px;
+
+    padding:
+      12px 90px 12px 12px;
+  }
+
+  nav ul{
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+  }
+
+  nav a{
+    font-size:.58rem;
+    letter-spacing:1px;
+  }
+
+  .lang-selector{
+    right:12px;
+  }
+
+  .hero{
+    min-height:100svh;
+  }
+
+  .hero h1{
+    letter-spacing:5px;
+  }
+
+  .hero h2{
+    letter-spacing:4px;
+  }
+
+  .bio-grid,
+  .project-grid{
+    grid-template-columns:1fr;
+
+    gap:35px;
+  }
+
+  .bio-image img{
+    max-height:none;
+  }
+
+  .project-grid{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .project-grid > div:first-child{
+    width:100%;
+  }
+
+  .next-overlay{
+    padding:35px 20px;
+  }
+
+  .next-title{
+    letter-spacing:4px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:
+      80px 17px;
+  }
+
+  .hero{
+    padding:
+      100px 18px 60px;
+  }
+
+  .logo{
+    width:100px;
+    height:100px;
+  }
+
+  .hero h1{
+    font-size:
+      clamp(
+        2rem,
+        12vw,
+        4rem
+      );
+
+    letter-spacing:3px;
+  }
+
+  .hero-sub{
+    font-size:.66rem;
+    letter-spacing:2px;
+  }
+
+  .hero-quote{
+    font-size:.9rem;
+  }
+
+  .card{
+    padding:24px 20px;
+  }
+
+  .audio-card{
+    grid-template-columns:1fr;
+  }
+
+  .audio-cover{
+    width:100%;
+    height:auto;
+
+    aspect-ratio:1/1;
+  }
+
+  .track{
+    align-items:flex-start;
+  }
+
+  .track-language{
+    display:none;
+  }
+
+  .socials{
+    flex-direction:column;
+  }
+
+  .socials a{
+    width:100%;
+  }
+
+  .next-overlay{
+    position:relative;
+
+    background:
+      linear-gradient(
+        180deg,
+        #050711,
+        #02030a
+      );
+
+    padding:
+      35px 20px;
+  }
+
+  .next-project-card img{
+    max-height:none;
+  }
+
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    animation:none !important;
+    transition:none !important;
+  }
+
+}
+
+</style>
+
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Krovina Vorona","url":"https://krovina-vorona.vercel.app/","sameAs":["https://open.spotify.com/intl-fr/artist/4rhHYBfXi2aJdaIRgKA9xG","https://music.apple.com/fr/artist/krovina-vorona/6811924246","https://music.youtube.com/playlist?list=OLAK5uy_m8Sh7Cl5FZhc1aYNvqJwcPMJawsFiZMnU"]}</script>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#bio" data-key="nav-bio">
+Bio
+</a>
+</li>
+
+<li>
+<a href="#current-project" data-key="nav-current">
+Projet actuel
+</a>
+</li>
+
+<li>
+<a href="#next-project" data-key="nav-next">
+Prochain projet
+</a>
+</li>
+
+<li>
+<a href="#listen" data-key="nav-listen">
+Écouter
+</a>
+</li>
+
+<li>
+<a href="#gallery" data-key="nav-gallery">
+Galerie
+</a>
+</li>
+
+<li>
+<a href="#socials" data-key="nav-socials">
+Réseaux
+</a>
+</li>
+
+<li>
+<a href="#contact" data-key="nav-contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+<select
+  class="lang-selector"
+  onchange="changeLanguage(this.value)"
+  aria-label="Language"
+>
+
+<option value="fr">FR</option>
+<option value="en">EN</option>
+<option value="ru">RU</option>
+<option value="ka">KA</option>
+
+</select>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img
+  class="logo"
+  src="9504EC44-00EE-4245-A6B1-A9F9637DB6C6.png"
+  alt="Krovina Vorona"
+>
+
+<h1>
+КРОВИНА ВОРОНА
+</h1>
+
+<h2>
+KROVINA VORONA
+</h2>
+
+<p
+  class="hero-sub"
+  data-key="hero-sub"
+>
+Artiste indépendante • Parolière • Ghostwriter
+</p>
+
+<p
+  class="hero-quote"
+  data-key="hero-quote"
+>
+« Entre le passé et le nouveau monde. »
+</p>
+
+<div class="buttons">
+
+<a
+  class="btn"
+  href="#current-project"
+  data-key="hero-btn"
+>
+Découvrir Nouvel Ordre
+</a>
+
+<a
+  class="btn"
+  href="#next-project"
+  data-key="hero-btn2"
+>
+Entre les mondes
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="official-platforms" class="streaming-section fade">
+<div class="streaming-box">
+<div class="section-head"><div class="kicker">OFFICIAL STREAMING</div><h2 class="section-title" data-key="official-title">PLATEFORMES OFFICIELLES</h2><div class="line"></div><p data-key="official-text">Retrouvez Krovina Vorona sur toutes les plateformes officielles.</p></div>
+<div class="streaming-grid">
+<a class="streaming-card spotify" href="https://open.spotify.com/intl-fr/artist/4rhHYBfXi2aJdaIRgKA9xG" target="_blank">Spotify</a>
+<a class="streaming-card apple" href="https://music.apple.com/fr/artist/krovina-vorona/6811924246" target="_blank">Apple Music</a>
+<a class="streaming-card ytmusic" href="https://music.youtube.com/playlist?list=OLAK5uy_m8Sh7Cl5FZhc1aYNvqJwcPMJawsFiZMnU" target="_blank">YouTube Music</a>
+</div></div></section>
+
+
+
+<!-- =========================
+     BIOGRAPHIE
+========================= -->
+
+<section
+  id="bio"
+  class="fade"
+>
+
+<div class="section-head">
+
+<div class="kicker">
+KROVINA VORONA
+</div>
+
+<h2
+  class="section-title"
+  data-key="title-bio"
+>
+BIOGRAPHIE
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="bio-grid">
+
+<div class="bio-image">
+
+<img
+  src="19D52A46-5D89-46CF-9A56-74F76EC32A88.png"
+  alt="Krovina Vorona"
+>
+
+</div>
+
+
+<div
+  class="card bio-text"
+  id="bio-content"
+></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJET ACTUEL
+     NOUVEL ORDRE
+========================= -->
+
+<section
+  id="current-project"
+  class="fade current-project"
+>
+
+<div class="section-head">
+
+<div
+  class="kicker"
+  data-key="current-kicker"
+>
+CURRENT PROJECT
+</div>
+
+<h2
+  class="section-title"
+  data-key="current-title"
+>
+НОВЫЙ ПОРЯДОК
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div>
+
+<img
+  class="cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Новый порядок — Nouvel Ordre"
+>
+
+</div>
+
+
+<div class="project-copy">
+
+<span
+  class="project-status"
+  data-key="current-status"
+>
+PROJET ACTUEL
+</span>
+
+<h3>
+Nouvel Ordre
+</h3>
+
+<div class="project-russian">
+Новый порядок
+</div>
+
+<p data-key="current-description">
+Nouvel Ordre est le projet actuel de Krovina Vorona :
+un univers sombre, mystique et introspectif où se rencontrent
+spiritualité, amour, société, occultisme, folklore d'Europe de l'Est
+et quête de vérité.
+</p>
+
+<p data-key="current-description-2">
+Le projet rassemble cinq morceaux et représente une première
+porte vers l'univers artistique de Krovina Vorona.
+</p>
+
+
+<div class="tracklist">
+
+<div class="track">
+
+<span class="track-number">
+01
+</span>
+
+<span class="track-name">
+матрица пепла
+</span>
+
+<span class="track-language">
+RU
+</span>
+
+</div>
+
+
+<div class="track">
+
+<span class="track-number">
+02
+</span>
+
+<span class="track-name">
+Кавказское Небо
+</span>
+
+<span class="track-language">
+GE / RU
+</span>
+
+</div>
+
+
+<div class="track">
+
+<span class="track-number">
+03
+</span>
+
+<span class="track-name">
+чёрные свечи
+</span>
+
+<span class="track-language">
+RU
+</span>
+
+</div>
+
+
+<div class="track">
+
+<span class="track-number">
+04
+</span>
+
+<span class="track-name">
+Пока мир горит
+</span>
+
+<span class="track-language">
+RU
+</span>
+
+</div>
+
+
+<div class="track">
+
+<span class="track-number">
+05
+</span>
+
+<span class="track-name">
+Tra inferno E paradiso
+</span>
+
+<span class="track-language">
+IT
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROCHAIN PROJET
+     ENTRE LES MONDES
+========================= -->
+
+<section
+  id="next-project"
+  class="fade next-project"
+>
+
+<div class="section-head">
+
+<div
+  class="kicker"
+  data-key="next-kicker"
+>
+NEXT PROJECT
+</div>
+
+<h2
+  class="section-title"
+  data-key="next-section-title"
+>
+ENTRE LES MONDES
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="next-project-intro">
+
+<p data-key="next-intro">
+Après Nouvel Ordre, Krovina Vorona ouvre une nouvelle porte
+vers un univers plus céleste, romantique et spirituel.
+Entre les mondes est le prochain projet de l'artiste.
+</p>
+
+</div>
+
+
+<div class="next-project-card">
+
+<img
+  src="5c4b0b54-0854-49c5-82d2-2719382a1924.png"
+  alt="Entre les mondes — МЕЖДУ МИРАМИ"
+>
+
+<div class="next-overlay">
+
+<div class="next-content">
+
+<div
+  class="next-label"
+  data-key="next-label"
+>
+PROCHAIN PROJET
+</div>
+
+<div class="next-title">
+МЕЖДУ МИРАМИ
+</div>
+
+<div class="next-subtitle">
+ENTRE LES MONDES
+</div>
+
+<p
+  class="next-description"
+  data-key="next-description"
+>
+Un voyage entre le rêve et la réalité,
+l'amour et la solitude, l'ombre et la lumière.
+Un nouvel univers où la spiritualité,
+les étoiles, l'âme et la quête de soi deviennent
+les portes d'un autre monde.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="fade quote-section">
+
+<div
+  class="quote"
+  data-key="quote"
+>
+« La musique est un langage universel capable de rapprocher
+les êtres humains malgré leurs différences. »
+</div>
+
+</section>
+
+
+<!-- =========================
+     AUDIO
+========================= -->
+
+<section
+  id="listen"
+  class="fade"
+>
+
+<div class="section-head">
+
+<div class="kicker">
+OFFICIAL AUDIO
+</div>
+
+<h2
+  class="section-title"
+  data-key="title-listen"
+>
+ÉCOUTER
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="audio-list">
+
+
+<!-- 01 -->
+
+<div class="audio-card">
+
+<img
+  class="audio-cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Nouvel Ordre"
+>
+
+<div class="audio-meta">
+
+<div class="label">
+01 · NOUVEL ORDRE
+</div>
+
+<div class="audio-title">
+матрица пепла
+</div>
+
+<audio
+  controls
+  preload="metadata"
+  src="матрица пепла - Krovina VORONA - SoundLoadMate.com.mp3"
+></audio>
+
+</div>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="audio-card">
+
+<img
+  class="audio-cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Nouvel Ordre"
+>
+
+<div class="audio-meta">
+
+<div class="label">
+02 · NOUVEL ORDRE
+</div>
+
+<div class="audio-title">
+Кавказское Небо
+</div>
+
+<audio
+  controls
+  preload="metadata"
+  src="Кавказское Небо 🇬🇪🇷🇺 - Krovina VORONA - SoundLoadMate.com.mp3"
+></audio>
+
+</div>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="audio-card">
+
+<img
+  class="audio-cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Nouvel Ordre"
+>
+
+<div class="audio-meta">
+
+<div class="label">
+03 · NOUVEL ORDRE
+</div>
+
+<div class="audio-title">
+чёрные свечи
+</div>
+
+<audio
+  controls
+  preload="metadata"
+  src="чёрныесвечи - Krovina VORONA - SoundLoadMate.com.mp3"
+></audio>
+
+</div>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="audio-card">
+
+<img
+  class="audio-cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Nouvel Ordre"
+>
+
+<div class="audio-meta">
+
+<div class="label">
+04 · NOUVEL ORDRE
+</div>
+
+<div class="audio-title">
+Пока мир горит
+</div>
+
+<audio
+  controls
+  preload="metadata"
+  src="Пока мир горит.mp3"
+></audio>
+
+</div>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="audio-card">
+
+<img
+  class="audio-cover"
+  src="94E6FE95-D340-4C31-A3B5-E02E1891F429.png"
+  alt="Nouvel Ordre"
+>
+
+<div class="audio-meta">
+
+<div class="label">
+05 · NOUVEL ORDRE
+</div>
+
+<div class="audio-title">
+Tra inferno E paradiso
+</div>
+
+<audio
+  controls
+  preload="metadata"
+  src="Tra inferno E paradiso - Krovina vorona - SoundLoadMate.com.mp3"
+></audio>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALERIE
+========================= -->
+
+<section
+  id="gallery"
+  class="fade"
+>
+
+<div class="section-head">
+
+<div class="kicker">
+VISUAL ARCHIVE
+</div>
+
+<h2
+  class="section-title"
+  data-key="title-gallery"
+>
+GALERIE
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img
+  src="D370F822-448B-4EEF-BA6E-5E0FC411D803.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="2746AA04-050E-4540-9AAF-927723048A2B.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="IMG_5520.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="7803CACA-7B01-46BB-9F39-74FB6C15057B.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="19D52A46-5D89-46CF-9A56-74F76EC32A88.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="IMG_5511.jpeg"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="IMG_5512.jpeg"
+  alt="Krovina Vorona"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="5c4b0b54-0854-49c5-82d2-2719382a1924.png"
+  alt="Entre les mondes"
+>
+</div>
+
+<div class="gallery-item">
+<img
+  src="ChatGPT Image 5 août 2026, 14_59_24.png"
+  alt="Krovina Vorona"
+>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RÉSEAUX
+========================= -->
+
+<section
+  id="socials"
+  class="fade"
+>
+
+<div class="section-head">
+
+<div class="kicker">
+FOLLOW THE JOURNEY
+</div>
+
+<h2
+  class="section-title"
+  data-key="title-socials"
+>
+RÉSEAUX
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="socials">
+
+<a
+  href="https://www.instagram.com/krovina.vorona"
+  target="_blank"
+  rel="noopener"
+>
+Instagram
+</a>
+
+<a
+  href="https://www.tiktok.com/@krovina495"
+  target="_blank"
+  rel="noopener"
+>
+TikTok
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  id="contact"
+  class="fade"
+>
+
+<div class="section-head">
+
+<div class="kicker">
+CONTACT
+</div>
+
+<h2
+  class="section-title"
+  data-key="title-contact"
+>
+CONTACT
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="card contact">
+
+<p data-key="contact-text">
+Pour collaborations, booking, presse ou projets artistiques :
+</p>
+
+<br>
+
+<a
+  href="mailto:krovina.vorona495@outlook.com"
+>
+krovina.vorona495@outlook.com
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>
+КРОВИНА ВОРОНА
+</h2>
+
+<div data-key="footer-artist">
+Independent Artist • Songwriter • Ghostwriter
+</div>
+
+<br>
+
+<div>
+Moscow • Tbilisi • Saint Petersburg
+</div>
+
+<br>
+
+<div>
+© 2026 Krovina Vorona
+</div>
+
+</footer>
+
+
+<!-- =========================
+     TRANSLATIONS
+========================= -->
+
+<script>
+
+const translations = {
+
+fr: {
+
+"nav-bio":"Bio",
+"nav-current":"Projet actuel",
+"nav-next":"Prochain projet",
+"nav-listen":"Écouter",
+"nav-gallery":"Galerie",
+"nav-socials":"Réseaux",
+"nav-contact":"Contact",
+
+"hero-sub":
+"Artiste indépendante • Parolière • Ghostwriter",
+
+"hero-quote":
+"« Entre le passé et le nouveau monde. »",
+
+"hero-btn":
+"Découvrir Nouvel Ordre",
+
+"hero-btn2":
+"Entre les mondes",
+
+"title-bio":
+"BIOGRAPHIE",
+
+"current-kicker":
+"PROJET ACTUEL",
+
+"current-title":
+"НОВЫЙ ПОРЯДОК",
+
+"current-status":
+"PROJET ACTUEL",
+
+"current-description":
+"Nouvel Ordre est le projet actuel de Krovina Vorona : un univers sombre, mystique et introspectif où se rencontrent spiritualité, amour, société, occultisme, folklore d'Europe de l'Est et quête de vérité.",
+
+"current-description-2":
+"Le projet rassemble cinq morceaux et représente une première porte vers l'univers artistique de Krovina Vorona.",
+
+"next-kicker":
+"PROCHAIN PROJET",
+
+"next-section-title":
+"ENTRE LES MONDES",
+
+"next-label":
+"PROCHAIN PROJET",
+
+"next-intro":
+"Après Nouvel Ordre, Krovina Vorona ouvre une nouvelle porte vers un univers plus céleste, romantique et spirituel. Entre les mondes est le prochain projet de l'artiste.",
+
+"next-description":
+"Un voyage entre le rêve et la réalité, l'amour et la solitude, l'ombre et la lumière. Un nouvel univers où la spiritualité, les étoiles, l'âme et la quête de soi deviennent les portes d'un autre monde.",
+
+"title-listen":
+"ÉCOUTER",
+
+"title-gallery":
+"GALERIE",
+
+"title-socials":
+"RÉSEAUX",
+
+"title-contact":
+"CONTACT",
+
+"quote":
+"« La musique est un langage universel capable de rapprocher les êtres humains malgré leurs différences. »",
+
+"contact-text":
+"Pour collaborations, booking, presse ou projets artistiques :",
+
+"footer-artist":
+"Independent Artist • Songwriter • Ghostwriter",
+
+"bio-html":`
+
+<p>
+<strong>Nom complet :</strong>
+Krovina Maria Vorona Avalishvili
+<br>
+<strong>Nom de scène :</strong>
+Krovina Vorona
+</p>
+
+<h3>── Origines et enfance ──</h3>
+
+<p>
+Krovina Vorona (Krovina Maria Vorona Avalishvili) est une artiste,
+parolière et ghostwriter indépendante.
+Née à Moscou en 2001 d'un père ambassadeur russo-géorgien
+et d'une mère infirmière franco-italienne, elle grandit en Géorgie,
+au croisement de plusieurs cultures, langues et héritages.
+</p>
+
+<h3>── Formation et scène ──</h3>
+
+<p>
+Son parcours artistique se construit très tôt autour de la scène,
+du mouvement et de l'image. Elle parfait son sens de la scène
+au cirque de Saint-Pétersbourg avant d'étudier l'audiovisuel,
+développant ainsi une approche où la musique, l'image,
+la mise en scène et le récit sont intimement liés.
+</p>
+
+<h3>── Indépendance artistique ──</h3>
+
+<p>
+Après s'être émancipée du label Matriochka Records,
+Krovina Vorona choisit la voie de l'indépendance artistique
+et construit elle-même son identité, son univers visuel
+et sa direction musicale.
+</p>
+
+<h3>── L'univers artistique ──</h3>
+
+<p>
+Sa musique est une alchimie hybride entre Dark Pop,
+Rock alternatif et Rap conscient, habitée par le folklore
+d'Europe de l'Est et un mysticisme profond.
+Son univers explore notamment l'amour, la solitude,
+la spiritualité, les mondes symboliques, l'ombre,
+la lumière et la quête de vérité.
+</p>
+
+<p>
+Son travail artistique cherche à créer un espace situé
+entre plusieurs réalités : entre le passé et le futur,
+entre le monde visible et l'invisible,
+entre la fragilité humaine et la puissance intérieure.
+</p>
+
+<p>
+<strong>
+« Entre le passé et le nouveau monde. »
+</strong>
+</p>
+
+`
+},
+
+en: {
+
+"nav-bio":"Bio",
+"nav-current":"Current project",
+"nav-next":"Next project",
+"nav-listen":"Listen",
+"nav-gallery":"Gallery",
+"nav-socials":"Socials",
+"nav-contact":"Contact",
+
+"hero-sub":
+"Independent Artist • Songwriter • Ghostwriter",
+
+"hero-quote":
+"“Between the past and the new world.”",
+
+"hero-btn":
+"Discover New Order",
+
+"hero-btn2":
+"Between the worlds",
+
+"title-bio":
+"BIOGRAPHY",
+
+"current-kicker":
+"CURRENT PROJECT",
+
+"current-title":
+"НОВЫЙ ПОРЯДОК",
+
+"current-status":
+"CURRENT PROJECT",
+
+"current-description":
+"New Order is Krovina Vorona's current project: a dark, mystical and introspective universe where spirituality, love, society, occultism, Eastern European folklore and the search for truth meet.",
+
+"current-description-2":
+"The project brings together five tracks and represents a first doorway into Krovina Vorona's artistic universe.",
+
+"next-kicker":
+"NEXT PROJECT",
+
+"next-section-title":
+"BETWEEN THE WORLDS",
+
+"next-label":
+"NEXT PROJECT",
+
+"next-intro":
+"After New Order, Krovina Vorona opens a new door toward a more celestial, romantic and spiritual universe. Between the Worlds is her upcoming project.",
+
+"next-description":
+"A journey between dream and reality, love and solitude, shadow and light. A new universe where spirituality, stars, the soul and the search for self become gateways into another world.",
+
+"title-listen":
+"LISTEN",
+
+"title-gallery":
+"GALLERY",
+
+"title-socials":
+"SOCIALS",
+
+"title-contact":
+"CONTACT",
+
+"quote":
+"“Music is a universal language capable of bringing human beings together despite their differences.”",
+
+"contact-text":
+"For collaborations, booking, press or artistic projects:",
+
+"footer-artist":
+"Independent Artist • Songwriter • Ghostwriter",
+
+"bio-html":`
+
+<p>
+<strong>Full name:</strong>
+Krovina Maria Vorona Avalishvili
+<br>
+<strong>Stage name:</strong>
+Krovina Vorona
+</p>
+
+<h3>── Origins and childhood ──</h3>
+
+<p>
+Krovina Vorona (Krovina Maria Vorona Avalishvili) is an
+independent artist, songwriter and ghostwriter.
+Born in Moscow in 2001 to a Russian-Georgian ambassador father
+and a French-Italian nurse mother, she grew up in Georgia,
+at the crossroads of several cultures, languages and traditions.
+</p>
+
+<h3>── Training and the stage ──</h3>
+
+<p>
+Her artistic path was shaped early through performance,
+movement and visual expression. She developed her stage presence
+through circus arts in Saint Petersburg before studying
+audiovisual production, building an approach in which music,
+image, staging and storytelling are deeply connected.
+</p>
+
+<h3>── Artistic independence ──</h3>
+
+<p>
+Following her departure from Matriochka Records,
+Krovina Vorona chose complete artistic independence,
+developing her own identity, visual universe and musical direction.
+</p>
+
+<h3>── Artistic universe ──</h3>
+
+<p>
+Her music is a hybrid alchemy of Dark Pop,
+alternative Rock and conscious Rap, infused with
+Eastern European folklore and deep mysticism.
+Her universe explores love, solitude, spirituality,
+symbolic worlds, darkness, light and the search for truth.
+</p>
+
+<p>
+Her artistic work seeks to create a space between different
+realities: between the past and the future,
+between the visible and the invisible,
+between human vulnerability and inner strength.
+</p>
+
+<p>
+<strong>
+“Between the past and the new world.”
+</strong>
+</p>
+
+`
+},
+
+ru: {
+
+"nav-bio":"Биография",
+"nav-current":"Текущий проект",
+"nav-next":"Следующий проект",
+"nav-listen":"Слушать",
+"nav-gallery":"Галерея",
+"nav-socials":"Соцсети",
+"nav-contact":"Контакты",
+
+"hero-sub":
+"Независимая артистка • Автор песен • Гострайтер",
+
+"hero-quote":
+"«Между прошлым и новым миром».",
+
+"hero-btn":
+"Открыть «Новый порядок»",
+
+"hero-btn2":
+"Между мирами",
+
+"title-bio":
+"БИОГРАФИЯ",
+
+"current-kicker":
+"ТЕКУЩИЙ ПРОЕКТ",
+
+"current-title":
+"НОВЫЙ ПОРЯДОК",
+
+"current-status":
+"ТЕКУЩИЙ ПРОЕКТ",
+
+"current-description":
+"«Новый порядок» — текущий проект Кровины Вороны: тёмная, мистическая и интроспективная вселенная, в которой встречаются духовность, любовь, общество, оккультизм, восточноевропейский фольклор и поиск истины.",
+
+"current-description-2":
+"Проект объединяет пять треков и становится первой дверью в художественную вселенную Кровины Вороны.",
+
+"next-kicker":
+"СЛЕДУЮЩИЙ ПРОЕКТ",
+
+"next-section-title":
+"МЕЖДУ МИРАМИ",
+
+"next-label":
+"СЛЕДУЮЩИЙ ПРОЕКТ",
+
+"next-intro":
+"После «Нового порядка» Кровина Ворона открывает новую дверь в более небесную, романтическую и духовную вселенную. «Между мирами» — её следующий проект.",
+
+"next-description":
+"Путешествие между сном и реальностью, любовью и одиночеством, тьмой и светом. Новая вселенная, где духовность, звёзды, душа и поиск себя становятся вратами в другой мир.",
+
+"title-listen":
+"СЛУШАТЬ",
+
+"title-gallery":
+"ГАЛЕРЕЯ",
+
+"title-socials":
+"СОЦСЕТИ",
+
+"title-contact":
+"КОНТАКТЫ",
+
+"quote":
+"«Музыка — универсальный язык, способный объединять людей несмотря на их различия».",
+
+"contact-text":
+"Для сотрудничества, букинга, прессы и художественных проектов:",
+
+"footer-artist":
+"Независимая артистка • Автор песен • Гострайтер",
+
+"bio-html":`
+
+<p>
+<strong>Полное имя:</strong>
+Кровина Мария Ворона Авалишвили
+<br>
+<strong>Сценическое имя:</strong>
+Кровина Ворона
+</p>
+
+<h3>── Происхождение и детство ──</h3>
+
+<p>
+Кровина Ворона (Кровина Мария Ворона Авалишвили) —
+независимая артистка, автор песен и гострайтер.
+Она родилась в Москве в 2001 году в семье
+русско-грузинского дипломата и франко-итальянской медсестры.
+Выросла в Грузии, на пересечении нескольких культур,
+языков и традиций.
+</p>
+
+<h3>── Обучение и сцена ──</h3>
+
+<p>
+Её артистический путь с ранних лет формировался
+через сцену, движение и визуальное выражение.
+Она совершенствовала сценическое мастерство
+в цирковом искусстве Санкт-Петербурга,
+а затем изучала аудиовизуальное искусство,
+соединяя музыку, изображение, постановку и повествование.
+</p>
+
+<h3>── Творческая независимость ──</h3>
+
+<p>
+После ухода с лейбла Matriochka Records
+Кровина Ворона выбрала полную творческую независимость,
+создавая собственную идентичность,
+визуальную вселенную и музыкальное направление.
+</p>
+
+<h3>── Художественная вселенная ──</h3>
+
+<p>
+Её музыка — это гибридная алхимия Dark Pop,
+альтернативного рока и осознанного рэпа,
+пропитанная восточноевропейским фольклором
+и глубоким мистицизмом.
+Её творчество исследует любовь, одиночество,
+духовность, символические миры,
+тьму, свет и поиск истины.
+</p>
+
+<p>
+Её искусство стремится создать пространство
+между различными реальностями:
+между прошлым и будущим,
+между видимым и невидимым,
+между человеческой уязвимостью
+и внутренней силой.
+</p>
+
+<p>
+<strong>
+«Между прошлым и новым миром».
+</strong>
+</p>
+
+`
+},
+
+ka: {
+
+"nav-bio":"ბიოგრაფია",
+"nav-current":"მიმდინარე პროექტი",
+"nav-next":"შემდეგი პროექტი",
+"nav-listen":"მოსმენა",
+"nav-gallery":"გალერეა",
+"nav-socials":"სოციალური ქსელები",
+"nav-contact":"კონტაქტი",
+
+"hero-sub":
+"დამოუკიდებელი არტისტი • სიმღერების ავტორი • გოსთრაიტერი",
+
+"hero-quote":
+"„წარსულსა და ახალ სამყაროს შორის.“",
+
+"hero-btn":
+"„ახალი წესრიგის“ აღმოჩენა",
+
+"hero-btn2":
+"სამყაროებს შორის",
+
+"title-bio":
+"ბიოგრაფია",
+
+"current-kicker":
+"მიმდინარე პროექტი",
+
+"current-title":
+"НОВЫЙ ПОРЯДОК",
+
+"current-status":
+"მიმდინარე პროექტი",
+
+"current-description":
+"„ახალი წესრიგი“ კროვინა ვორონას მიმდინარე პროექტია — ბნელი, მისტიკური და ინტროსპექტული სამყარო, სადაც ერთმანეთს ხვდება სულიერება, სიყვარული, საზოგადოება, ოკულტიზმი, აღმოსავლეთევროპული ფოლკლორი და ჭეშმარიტების ძიება.",
+
+"current-description-2":
+"პროექტი ხუთ ტრეკს აერთიანებს და კროვინა ვორონას მხატვრულ სამყაროში შესასვლელ პირველ კარს წარმოადგენს.",
+
+"next-kicker":
+"შემდეგი პროექტი",
+
+"next-section-title":
+"МЕЖДУ МИРАМИ",
+
+"next-label":
+"შემდეგი პროექტი",
+
+"next-intro":
+"„ახალი წესრიგის“ შემდეგ კროვინა ვორონა ხსნის ახალ კარს უფრო ციური, რომანტიკული და სულიერი სამყაროსკენ. „სამყაროებს შორის“ მისი შემდეგი პროექტია.",
+
+"next-description":
+"მოგზაურობა სიზმარსა და რეალობას, სიყვარულსა და მარტოობას, სიბნელესა და სინათლეს შორის. ახალი სამყარო, სადაც სულიერება, ვარსკვლავები, სული და საკუთარი თავის ძიება სხვა სამყაროში გადასასვლელ კარიბჭეებად იქცევა.",
+
+"title-listen":
+"მოსმენა",
+
+"title-gallery":
+"გალერეა",
+
+"title-socials":
+"სოციალური ქსელები",
+
+"title-contact":
+"კონტაქტი",
+
+"quote":
+"„მუსიკა უნივერსალური ენაა, რომელსაც ადამიანების გაერთიანება შეუძლია მათი განსხვავებების მიუხედავად.“",
+
+"contact-text":
+"თანამშრომლობის, ბუკინგის, პრესისა და შემოქმედებითი პროექტებისთვის:",
+
+"footer-artist":
+"დამოუკიდებელი არტისტი • სიმღერების ავტორი • გოსთრაიტერი",
+
+"bio-html":`
+
+<p>
+<strong>სრული სახელი:</strong>
+Krovina Maria Vorona Avalishvili
+<br>
+<strong>სასცენო სახელი:</strong>
+Krovina Vorona
+</p>
+
+<h3>── წარმოშობა და ბავშვობა ──</h3>
+
+<p>
+კროვინა ვორონა (Krovina Maria Vorona Avalishvili)
+დამოუკიდებელი არტისტი, სიმღერების ავტორი და გოსთრაიტერია.
+იგი 2001 წელს მოსკოვში დაიბადა
+რუსულ-ქართული დიპლომატისა და ფრანგულ-იტალიელი
+მედდის ოჯახში.
+კროვინა საქართველოში გაიზარდა,
+სადაც სხვადასხვა კულტურის, ენისა და ტრადიციის
+გავლენა მიიღო.
+</p>
+
+<h3>── განათლება და სცენა ──</h3>
+
+<p>
+მისი არტისტული გზა ადრეული ასაკიდან
+სცენას, მოძრაობასა და ვიზუალურ გამოხატვას უკავშირდება.
+მან სანქტ-პეტერბურგში ცირკის ხელოვნების მიმართულებით
+სცენური გამოცდილება განავითარა,
+შემდეგ კი აუდიოვიზუალური ხელოვნება შეისწავლა.
+ამ გამოცდილებამ მუსიკა, გამოსახულება,
+სცენოგრაფია და თხრობა ერთიან სამყაროდ აქცია.
+</p>
+
+<h3>── შემოქმედებითი დამოუკიდებლობა ──</h3>
+
+<p>
+Matriochka Records-ის ლეიბლის დატოვების შემდეგ
+კროვინა ვორონამ სრული შემოქმედებითი დამოუკიდებლობა აირჩია.
+მან საკუთარი იდენტობის, ვიზუალური სამყაროსა
+და მუსიკალური მიმართულების დამოუკიდებლად შექმნა დაიწყო.
+</p>
+
+<h3>── არტისტული სამყარო ──</h3>
+
+<p>
+მისი მუსიკა Dark Pop-ის, ალტერნატიული როკისა
+და conscious Rap-ის ჰიბრიდული ალქიმიაა,
+რომელიც აღმოსავლეთევროპული ფოლკლორითა
+და ღრმა მისტიციზმით არის გაჟღენთილი.
+მისი შემოქმედება იკვლევს სიყვარულს,
+მარტოობას, სულიერებას, სიმბოლურ სამყაროებს,
+სიბნელეს, სინათლესა და ჭეშმარიტების ძიებას.
+</p>
+
+<p>
+მისი ხელოვნება ცდილობს შექმნას სივრცე
+სხვადასხვა რეალობას შორის:
+წარსულსა და მომავალს შორის,
+ხილულსა და უხილავს შორის,
+ადამიანურ სისუსტესა და შინაგან ძალას შორის.
+</p>
+
+<p>
+<strong>
+„წარსულსა და ახალ სამყაროს შორის.“
+</strong>
+</p>
+
+`
+}
+
+};
+
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+function changeLanguage(lang){
+
+  document.documentElement.lang = lang;
+
+  document
+    .querySelectorAll("[data-key]")
+    .forEach(element => {
+
+      const key = element.dataset.key;
+
+      if(
+        translations[lang] &&
+        translations[lang][key]
+      ){
+        element.textContent =
+          translations[lang][key];
+      }
+
+    });
+
+  const bio =
+    document.getElementById("bio-content");
+
+  if(
+    bio &&
+    translations[lang] &&
+    translations[lang]["bio-html"]
+  ){
+    bio.innerHTML =
+      translations[lang]["bio-html"];
+  }
+
+}
+
+
+/* =========================
+   INITIAL LANGUAGE
+========================= */
+
+changeLanguage("fr");
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("show");
+
+        }
+
+      });
+
+    },
+    {
+      threshold:.08
+    }
+  );
+
+
+document
+  .querySelectorAll(".fade")
+  .forEach(element => {
+
+    observer.observe(element);
+
+  });
+
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>
