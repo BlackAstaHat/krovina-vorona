@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://krovina-vorona.vercel.app/sitemap.xml
