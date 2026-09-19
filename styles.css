@@ -1,0 +1,8 @@
+
+.streaming-section{max-width:1200px;margin:auto;padding:90px 22px}
+.streaming-box{background:linear-gradient(145deg,rgba(10,15,35,.86),rgba(4,6,18,.95));border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:40px;backdrop-filter:blur(18px);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.streaming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.streaming-card{display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;padding:22px;border-radius:18px;border:1px solid rgba(255,255,255,.12);transition:.3s}
+.streaming-card:hover{transform:translateY(-4px);box-shadow:0 0 28px rgba(120,145,255,.28)}
+.spotify{background:#1DB95422}.apple{background:#FA3C4C22}.ytmusic{background:#FF000022}
+@media(max-width:900px){.streaming-grid{grid-template-columns:1fr}}
