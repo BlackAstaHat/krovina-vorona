@@ -1,3 +1,0 @@
-
-const extraTranslations={fr:{"official-title":"PLATEFORMES OFFICIELLES","official-text":"Retrouvez Krovina Vorona sur toutes les plateformes officielles."},en:{"official-title":"OFFICIAL PLATFORMS","official-text":"Listen to Krovina Vorona on all official platforms."},ru:{"official-title":"ОФИЦИАЛЬНЫЕ ПЛАТФОРМЫ","official-text":"Слушайте Кровину Ворону на всех официальных платформах."},ka:{"official-title":"ოფიციალური პლატფორმები","official-text":"მოუსმინეთ Krovina Vorona-ს ყველა ოფიციალურ პლატფორმაზე."}};
-if(window.translations){for(const l in extraTranslations){translations[l]={...translations[l],...extraTranslations[l]};}}
